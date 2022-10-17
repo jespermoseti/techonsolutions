@@ -1,0 +1,39 @@
+.servicespage {
+  margin: 0;
+  padding: var(--size-1);
+  text-align: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote {
+  border-radius: 0.5rem;
+  background-color: var(--color-primary-500);
+  padding: 0 0.5rem;
+  width: fit-content;
+}
+
+.quote h2 {
+  margin: 0;
+}
+
+.quote a {
+  color: var(--color-primary-50);
+}
+
+@media (min-width: 40rem) {
+  .servicespage {
+    margin: 3rem auto;
+    max-width: 50rem;
+  }
+
+  .service {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

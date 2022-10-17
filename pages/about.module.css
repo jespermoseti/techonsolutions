@@ -1,0 +1,12 @@
+.aboutpage {
+  margin: 0;
+  padding: var(--size-1);
+  text-align: left;
+}
+
+@media (min-width: 40rem) {
+  .aboutpage {
+    margin: 3rem auto;
+    max-width: 50rem;
+  }
+}

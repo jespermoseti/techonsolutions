@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: xx-large;
+}
+
+.LogoText p {
+  margin: 0;
+  font-size: large;
+}

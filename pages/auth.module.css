@@ -1,0 +1,10 @@
+.auth {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .auth {
+    margin: 3rem auto;
+    max-width: 50rem;
+  }
+}

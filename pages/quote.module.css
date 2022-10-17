@@ -1,0 +1,121 @@
+.quote {
+  margin: 0;
+  padding: var(--size-1);
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title h3 {
+  margin: 0 auto;
+}
+
+.message {
+  padding: 1rem;
+  background-color: var(--color-primary-700);
+  color: var(--color-primary-50);
+}
+
+.control {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0;
+}
+
+.control textarea,
+.control input {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 0.25rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary-600);
+  color: var(--color-primary-50);
+  border: 1px solid var(--color-primary-50);
+  cursor: pointer;
+}
+
+.information p {
+  text-align: left;
+}
+
+.messages {
+  text-align: center;
+}
+
+.description {
+  margin: 0;
+  padding: var(--size-1);
+  text-align: center;
+}
+
+.details {
+  width: 100%;
+  padding: var(--size-2);
+}
+
+.detail h4 {
+  margin: 0.25rem 0;
+}
+
+.deletebtn {
+  width: fit-content;
+  margin: 0 auto;
+  color: red;
+  font-size: xx-large;
+}
+
+@media (min-width: 70rem) {
+  .quote {
+    margin: 3rem auto;
+    max-width: 70rem;
+  }
+
+  .message {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+  }
+
+  .control {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .control textarea,
+  .control input {
+    width: 25rem;
+    border-radius: 3px;
+    margin: 0 2rem;
+  }
+
+  .btn {
+    margin-left: 75%;
+    margin-right: 0;
+    width: 25%;
+    background-color: var(--color-primary-600);
+    color: var(--color-primary-50);
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .deletebtn {
+    margin: 0;
+  }
+}

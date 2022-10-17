@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  top: var(--size-20);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 40rem) {
+  .overlay {
+    visibility: hidden;
+  }
+}

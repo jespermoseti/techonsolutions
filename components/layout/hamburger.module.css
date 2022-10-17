@@ -1,0 +1,9 @@
+.hamburger {
+  font-size: xx-large;
+}
+
+@media (min-width: 40rem) {
+  .hamburger {
+    display: none;
+  }
+}
