@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 import Image from "next/image";
-import { Fragment } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import classes from "./home.module.css";
 
 function Home(props) {
@@ -8,7 +9,48 @@ function Home(props) {
   return (
     <section className={classes.homepage}>
       <div className={classes.videos}>
-        <video
+        <Carousel
+          interval={5000}
+          autoPlay="autoPlay"
+          infiniteLoop={true}
+          showThumbs={false}
+        >
+          <div>
+            <img src="/images/carousel1.jpg" alt="image1" layout="fill" />
+            <p className="legend">Techonsolutions</p>
+          </div>
+          <div>
+            <img src="/images/carousel2.jpg" alt="image2" layout="fill" />
+            <p className="legend">We offer IT services in Kenya</p>
+          </div>
+          <div>
+            <img src="/images/carousel3.jpg" alt="image3" layout="fill" />
+            <p className="legend">
+              Networking | Consultancy | Cybersecurity | Web development | Cloud
+              computing | IT Support
+            </p>
+          </div>
+          <div>
+            <img src="/images/carousel4.jpg" alt="image4" layout="fill" />
+            <p className="legend">
+              techonsolutions@yahoo.com | +254705933595 | Social media:
+              @techonsolns
+            </p>
+          </div>
+        </Carousel>
+      </div>
+
+      {/* <Image
+        className={classes.backgroundImage}
+        src="/images/wallpaper.jpg"
+        alt="an image showing jes"
+        //layout="fill"
+        width={600}
+        height={400}
+        objectFit="cover"
+        objectPosition="center"
+      /> */}
+      {/* <video
           autoPlay
           loop
           muted
@@ -21,18 +63,7 @@ function Home(props) {
           }}
         >
           <source src="/images/city.mp4" type="video/mp4" />
-        </video>
-      </div>
-      {/* <Image
-        className={classes.backgroundImage}
-        src="/images/wallpaper.jpg"
-        alt="an image showing jes"
-        //layout="fill"
-        width={600}
-        height={400}
-        objectFit="cover"
-        objectPosition="center"
-      /> */}
+        </video> */}
       {descriptiondata.map((item) => (
         <p key={item._id}>{item.description}</p>
       ))}

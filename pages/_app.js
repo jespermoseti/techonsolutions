@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
             />
             <meta
               name="description"
-              content="information technology IT solutions and services in Nairobi kenya"
+              content="Techonsolutions information technology IT solutions and services Nairobi Kenya"
             />
           </Head>
           <Component {...pageProps} />

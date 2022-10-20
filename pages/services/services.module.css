@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-primary-700);
 }
 
 .quote {

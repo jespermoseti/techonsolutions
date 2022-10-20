@@ -32,6 +32,12 @@ function Footer() {
               <Link href={"/services"}>Services</Link>
             </li>
             <li>
+              <Link href={""}>Shop</Link>
+            </li>
+            <li>
+              <Link href={""}>Blog</Link>
+            </li>
+            <li>
               <Link href={"/contacts"}>Contacts</Link>
             </li>
           </ul>
