@@ -321,14 +321,14 @@ function Dashboard(props) {
 export async function getServerSideProps(context) {
   const session = await getSession({ req: context.req });//this method is replaced by unstable_getServerSession method
 
-  //if (!session) {
-    //return {
-      //redirect: {
-        //destination: "/auth",
-        //permanent: false,
-      //},
-    //};
-  //}
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/auth",
+        permanent: false,
+      },
+    };
+  }
 
   // const client = await MongoClient.connect(
   //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
