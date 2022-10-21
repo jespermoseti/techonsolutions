@@ -40,16 +40,6 @@ function Home(props) {
         </Carousel>
       </div>
 
-      {/* <Image
-        className={classes.backgroundImage}
-        src="/images/wallpaper.jpg"
-        alt="an image showing jes"
-        //layout="fill"
-        width={600}
-        height={400}
-        objectFit="cover"
-        objectPosition="center"
-      /> */}
       {/* <video
           autoPlay
           loop
@@ -67,6 +57,17 @@ function Home(props) {
       {descriptiondata.map((item) => (
         <p key={item._id}>{item.description}</p>
       ))}
+      
+      <Image
+        className={classes.backgroundImage}
+        src="/images/wallpaper.jpg"
+        alt="an image showing jes"
+        //layout="fill"
+        width={600}
+        height={400}
+        objectFit="cover"
+        objectPosition="center"
+      />
     </section>
   );
 }
