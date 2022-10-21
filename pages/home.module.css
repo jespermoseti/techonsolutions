@@ -5,9 +5,16 @@
   justify-content: center;
 }
 
+.carousel {
+  margin-top: 1rem;
+}
+
 @media (min-width: 40rem) {
   .homepage {
     margin: auto;
     max-width: 60rem;
+  }
+  .carousel {
+    margin-top: 0.25rem;
   }
 }
