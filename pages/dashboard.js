@@ -31,7 +31,7 @@ function Dashboard(props) {
   useEffect(() => {
     getSession().then((session) => {
       if (!session) {
-        window.location.href = "/auth";
+        router.replace("/auth");
         }
       });
      }, []);
