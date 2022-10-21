@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.homepage p {
+  margin: 0 0.5rem;
+}
+
 .carousel {
   margin-top: 1rem;
 }
