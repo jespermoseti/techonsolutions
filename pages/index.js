@@ -8,7 +8,7 @@ function Home(props) {
   const descriptiondata = JSON.parse(props.data);
   return (
     <section className={classes.homepage}>
-      <div className={classes.videos}>
+      <div className={classes.carousel}>
         <Carousel
           interval={5000}
           autoPlay="autoPlay"
