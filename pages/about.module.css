@@ -4,6 +4,10 @@
   text-align: left;
 }
 
+.aboutpage p {
+  margin: 0 0.5rem;
+}
+
 @media (min-width: 40rem) {
   .aboutpage {
     margin: 3rem auto;
