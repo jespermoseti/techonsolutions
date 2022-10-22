@@ -58,16 +58,16 @@ function Home(props) {
         <p key={item._id}>{item.description}</p>
       ))}
       
-      <Image
-        className={classes.backgroundImage}
-        src="/images/wallpaper.jpg"
-        alt="an image showing jes"
-        //layout="fill"
-        width={600}
-        height={400}
-        objectFit="cover"
-        objectPosition="center"
-      />
+      //<Image
+        //className={classes.backgroundImage}
+        //src="/images/wallpaper.jpg"
+        //alt="an image showing jes"
+        ////layout="fill"
+        //width={600}
+        //height={400}
+        //objectFit="cover"
+        //objectPosition="center"
+      ///>
     </section>
   );
 }
