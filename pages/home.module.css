@@ -10,10 +10,6 @@
   margin: 0 0.5rem;
 }
 
-.carousel {
-  margin: 0;
-}
-
 @media (min-width: 40rem) {
   .homepage {
     margin: auto;
