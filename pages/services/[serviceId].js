@@ -15,6 +15,10 @@ function Service(props) {
   const filteredservice = services.filter(
     (service) => service.service.toLowerCase() === serviceid
   );
+  
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   // console.log(router.pathname);
   // console.log(router.query);
@@ -23,7 +27,7 @@ function Service(props) {
     <Fragment>
       {filteredservice.map((filteredservice) => (
         <div className={classes.service} key={filteredservice._id}>
-          <h2>{filteredservice.service}</h2>
+          <h2>{capitalizeFirstLetter(filteredservice.service)}</h2>
           <Image
             className={classes.serviceImage}
             src={`/images/${filteredservice.service}.jpg`}
