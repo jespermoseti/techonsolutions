@@ -32,7 +32,9 @@
     margin: 3rem auto;
     max-width: 50rem;
   }
-
+  .quote {
+    white-space: nowrap;
+  }
   .service {
     flex-direction: row;
     justify-content: space-between;
