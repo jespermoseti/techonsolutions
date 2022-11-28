@@ -49,7 +49,7 @@ function MainNavigation() {
               <Link href={""}>Shop</Link>
             </li>
             <li>
-              <Link href={""}>Blog</Link>
+              <Link href={"https://blog.techonsolutions.com/"}>Blog</Link>
             </li>
             <li>
               <Link href={"/contacts"}>Contacts</Link>
