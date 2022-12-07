@@ -21,7 +21,7 @@ function Footer() {
       <div className={classes.footer}>
         <div className={classes.description}>
           <h4>Techonsolutions</h4>
-          <p>We offer technology services</p>
+          <p>Information Technology Solutions and Services</p>
         </div>
         <div className={classes.navlinks}>
           <ul>
