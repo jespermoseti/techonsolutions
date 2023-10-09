@@ -1,13 +1,14 @@
+/* footer.module.css */
+
 .footer {
-  margin-top: auto;
   background-color: var(--color-primary-700);
-  padding: 0 0.25rem;
   color: var(--color-primary-50);
+  padding: 1rem 0.5rem; /* Adjust padding for better spacing */
+  text-align: center;
 }
 
 .description {
   padding: 1rem 0;
-  text-align: center;
 }
 
 .description h4,
@@ -18,49 +19,71 @@
 .navlinks ul {
   display: flex;
   list-style: none;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center; /* Center navigation links */
   margin: 0;
   padding: 0;
+}
+
+.navlinks li {
+  margin: 0.5rem; /* Add spacing between list items */
 }
 
 .navlinks li a {
   color: var(--color-primary-50);
   padding: 0;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+.navlinks li a:hover {
+  color: var(--color-primary-300); /* Change color on hover */
 }
 
 .socialIcons {
   display: flex;
-  justify-content: space-around;
-  padding: 0.25rem;
-  font-size: x-large;
+  justify-content: center; /* Center social icons */
+  margin-top: 1rem; /* Add spacing from navigation */
 }
 
 .socialIcons a {
-  padding: 0.25rem;
+  padding: 0.5rem; /* Adjust spacing around icons */
+  font-size: 1.5rem; /* Increase icon size */
+  color: var(--color-primary-50);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialIcons a:hover {
+  color: var(--color-primary-300);
 }
 
 .scrollUp {
   display: flex;
-  justify-content: flex-end;
-  font-size: large;
+  justify-content: center; /* Center scroll-up icon */
+  margin-top: 1rem; /* Add spacing from social icons */
+  font-size: 2rem; /* Increase icon size */
+  cursor: pointer;
 }
 
 .legal {
   font-size: small;
-  text-align: center;
   color: var(--color-primary-700);
+  margin-top: 1rem; /* Add spacing from the rest of the content */
 }
 
 @media (min-width: 40rem) {
   .footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .navlinks ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Revert to a horizontal layout */
+  }
+
+  .navlinks li {
+    margin: 0 1rem; /* Add horizontal spacing between list items */
   }
 }
