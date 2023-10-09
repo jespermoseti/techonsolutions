@@ -10,11 +10,6 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.service:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .service h2 {
   font-size: 1.5rem;
   margin: 1rem 0;
@@ -38,7 +33,7 @@
   padding: 0.5rem 1rem;
   text-align: center;
   transition: background-color 0.2s;
-  max-width: 50rem;
+  max-width: 25rem;
 }
 
 .quote:hover {
