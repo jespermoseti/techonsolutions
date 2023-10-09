@@ -1,42 +1,45 @@
+/* services.module.css */
+
 .servicespage {
-  margin: 0;
-  padding: var(--size-1);
-  text-align: center;
+  margin: 3rem auto;
+  max-width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--color-primary-700);
+  max-width: 24rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.description p {
+  text-align: left;
+  margin: 1rem 0;
 }
 
 .quote {
+  margin-top: 1rem;
+  background-color: #007acc;
   border-radius: 0.5rem;
-  background-color: var(--color-primary-500);
-  padding: 0 0.5rem;
-  width: fit-content;
+  padding: 0.5rem 1rem;
 }
 
 .quote h2 {
   margin: 0;
+  color: white;
 }
 
 .quote a {
-  color: var(--color-primary-50);
-}
-
-@media (min-width: 40rem) {
-  .servicespage {
-    margin: 3rem auto;
-    max-width: 50rem;
-  }
-  .quote {
-    white-space: nowrap;
-  }
-  .service {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  color: white;
+  text-decoration: none;
 }
