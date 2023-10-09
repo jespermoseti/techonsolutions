@@ -21,7 +21,15 @@ function Service(props) {
         />
         <p>{props.serviceitem.description.slice(0, 200)}...</p>
       </div>
+      <div className={classes.quote}>
+        <Link href={"/quote"}>
+          <a>
+            <h2>Get a Quote</h2>
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }
 export default Service;
+
