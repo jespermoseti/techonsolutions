@@ -1,8 +1,6 @@
 /* service.module.css */
 
 .service {
-  margin: 1rem;
-  padding: 1rem;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -10,11 +8,6 @@
   align-items: center;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.service:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service h2 {
