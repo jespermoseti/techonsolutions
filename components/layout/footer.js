@@ -68,7 +68,7 @@ function Footer() {
           <BsFillArrowUpCircleFill />
         </div>
       </div>
-      <div className={classes.legal}> © Techonsolutions @{Year}</div>
+      <div className={classes.legal}>© Techonsolutions @{Year}</div>
     </Fragment>
   );
 }
