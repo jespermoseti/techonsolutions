@@ -16,13 +16,6 @@ function Services(props) {
               <Service serviceitem={serviceitem} />
             </a>
           </Link>
-          <div className={classes.quote}>
-            <Link href={"/quote"}>
-              <a>
-                <h2>Get Quote</h2>
-              </a>
-            </Link>
-          </div>
         </div>
       ))}
     </div>
