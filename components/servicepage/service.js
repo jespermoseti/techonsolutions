@@ -14,8 +14,8 @@ function Service(props) {
           className={classes.serviceImage}
           src={`/images/${props.serviceitem.service}.jpg`}
           alt="an image showing service"
-          width={200}
-          height={100}
+          width={600}
+          height={400}
           objectFit="cover"
           objectPosition="center"
         />
