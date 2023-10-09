@@ -1,73 +1,36 @@
-/* service.module.css */
-
 .service {
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0;
+  padding: 0 0.3rem;
+  color: var(--color-primary-700);
 }
 
 .service h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  text-align: center; /* Center text on all screen sizes */
+  text-align: center;
+  margin: 0;
 }
 
 .content {
-  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.serviceImage {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-}
-
 .content p {
-  text-align: left; /* Align text to the left on all screen sizes */
-  margin: 1rem 0;
-  padding: 0 1rem;
-}
-
-.quote {
-  margin-top: 1rem;
-  background-color: #007acc;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  transition: background-color 0.2s;
-}
-
-.quote:hover {
-  background-color: #005a9e;
-}
-
-.quote h2 {
   margin: 0;
-  color: white;
-}
-
-.quote a {
-  color: white;
-  text-decoration: none;
+  text-align: left;
 }
 
 @media (min-width: 40rem) {
   .service {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the top on larger screens */
+    margin: auto;
+  }
+
+  .service h2 {
+    text-align: left;
   }
 
   .content {
-    flex: 1; /* Allow content to take available width on larger screens */
-    margin-right: 1rem; /* Add some spacing between components */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-
