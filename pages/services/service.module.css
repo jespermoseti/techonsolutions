@@ -1,31 +1,47 @@
+/* service.module.css */
+
 .service {
   max-width: 50rem;
   margin: 0.25rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .service h2 {
-  margin: 0;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.serviceImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .description p {
   text-align: left;
-  margin: 0 0.5rem;
+  margin: 1rem 0;
 }
 
 .quote {
+  margin-top: 1rem;
+  background-color: #007acc;
   border-radius: 0.5rem;
-  background-color: var(--color-primary-500);
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .quote h2 {
   margin: 0;
-  padding: 0 0.5rem;
+  color: white;
 }
 
 .quote a {
-  color: var(--color-primary-50);
+  color: white;
+  text-decoration: none;
 }
+
