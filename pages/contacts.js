@@ -2,7 +2,7 @@ import { Fragment, useRef, useContext } from "react";
 import { MongoClient } from "mongodb";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
@@ -20,7 +20,7 @@ async function sendMessageData(details) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "something went wrong!!");
+    throw new Error(data.message || "Something went wrong!!");
   }
 
   return data;
@@ -37,7 +37,7 @@ async function deleteMessage(idreceived) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "something went wrong!!");
+    throw new Error(data.message || "Something went wrong!!");
   }
 
   return data;
@@ -113,11 +113,11 @@ function Contacts(props) {
       <section>
         <div className={classes.contact}>
           <div className={classes.title}>
-            <h2>Contact us</h2>
+            <h2>Contact Us</h2>
           </div>
           <div className={classes.contacts}>
             <div className={classes.phone}>
-              <BsTelephone /> <p>+254113270070</p>
+              <BsTelephone /> <p>+254 113 270 070</p>
             </div>
             <div className={classes.email}>
               <FiMail />
@@ -147,25 +147,25 @@ function Contacts(props) {
               </a>
             </Link>
           </div>
-          <h3>Leave a message</h3>
+          <h3>Leave a Message</h3>
           <div className={classes.message}>
             <form onSubmit={submitHandler}>
               <div className={classes.control}>
-                <label htmlFor="title">Name</label>
-                <input type="name" id="title" required ref={nameRef} />
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" required ref={nameRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor="title">Email</label>
-                <input type="email" id="title" required ref={emailRef} />
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" required ref={emailRef} />
               </div>
               <div className={classes.control}>
-                <label htmlFor="description">Message</label>
+                <label htmlFor="message">Message</label>
                 <textarea
-                  rows="10"
-                  id="description"
+                  rows="5"
+                  id="message"
                   required
                   ref={messageRef}
-                />
+                ></textarea>
               </div>
               <button className={classes.btn}>Send</button>
             </form>
@@ -179,14 +179,12 @@ function Contacts(props) {
           {storedMessages.map((message) => (
             <div className={classes.details} key={message._id}>
               <div className={classes.detail}>
-                <h4>{`${message.name}(${message.email})`}</h4>
+                <h4>{`${message.name} (${message.email})`}</h4>
               </div>
               <div className={classes.detail}>{message.message}</div>
               <div
                 className={classes.deletebtn}
-                onClick={() => (
-                  deleteMessageHandler(message._id), router.push("/contacts")
-                )}
+                onClick={() => deleteMessageHandler(message._id)}
               >
                 <RiDeleteBin6Line />
               </div>
@@ -199,9 +197,6 @@ function Contacts(props) {
 }
 
 export async function getStaticProps(context) {
-  // const client = await MongoClient.connect(
-  //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
-  // );
   const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ibpnt47.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
   const client = await MongoClient.connect(connectionString);
 
