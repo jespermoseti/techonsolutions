@@ -73,7 +73,7 @@
 .legal {
   font-size: small;
   color: var(--color-primary-700);
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 @media (min-width: 40rem) {
