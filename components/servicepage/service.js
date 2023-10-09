@@ -19,7 +19,7 @@ function Service(props) {
           objectFit="cover"
           objectPosition="center"
         />
-        <p>{props.serviceitem.description.slice(0, 100)}...</p>
+        <p>{props.serviceitem.description.slice(0, 200)}...</p>
       </div>
     </div>
   );
