@@ -3,8 +3,12 @@
 .footer {
   background-color: var(--color-primary-700);
   color: var(--color-primary-50);
-  padding: 1rem 0.5rem; /* Adjust padding for better spacing */
+  padding: 1rem 0.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column; /* Default to a column layout */
+  align-items: center;
+  justify-content: center; /* Center content vertically */
 }
 
 .description {
@@ -19,35 +23,36 @@
 .navlinks ul {
   display: flex;
   list-style: none;
-  justify-content: center; /* Center navigation links */
+  flex-direction: column; /* Display links vertically by default */
+  align-items: center; /* Center links horizontally */
   margin: 0;
   padding: 0;
 }
 
 .navlinks li {
-  margin: 0.5rem; /* Add spacing between list items */
+  margin: 0.5rem;
 }
 
 .navlinks li a {
   color: var(--color-primary-50);
   padding: 0;
-  text-decoration: none; /* Remove underline */
-  transition: color 0.2s; /* Smooth color transition on hover */
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .navlinks li a:hover {
-  color: var(--color-primary-300); /* Change color on hover */
+  color: var(--color-primary-300);
 }
 
 .socialIcons {
   display: flex;
-  justify-content: center; /* Center social icons */
-  margin-top: 1rem; /* Add spacing from navigation */
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .socialIcons a {
-  padding: 0.5rem; /* Adjust spacing around icons */
-  font-size: 1.5rem; /* Increase icon size */
+  padding: 0.5rem;
+  font-size: 1.5rem;
   color: var(--color-primary-50);
   text-decoration: none;
   transition: color 0.2s;
@@ -59,31 +64,32 @@
 
 .scrollUp {
   display: flex;
-  justify-content: center; /* Center scroll-up icon */
-  margin-top: 1rem; /* Add spacing from social icons */
-  font-size: 2rem; /* Increase icon size */
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .legal {
   font-size: small;
   color: var(--color-primary-700);
-  margin-top: 1rem; /* Add spacing from the rest of the content */
+  margin-top: 1rem;
 }
 
 @media (min-width: 40rem) {
   .footer {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Switch to a row layout on desktop */
+    justify-content: space-between; /* Spread content horizontally */
     align-items: center;
-    justify-content: center;
+    text-align: left;
   }
 
   .navlinks ul {
-    flex-direction: row; /* Revert to a horizontal layout */
+    flex-direction: column; /* Display links vertically on desktop */
+    margin-top: 0;
   }
 
   .navlinks li {
-    margin: 0 1rem; /* Add horizontal spacing between list items */
+    margin: 0 1rem;
   }
 }
