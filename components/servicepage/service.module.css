@@ -38,7 +38,7 @@
   border-radius: 0.5rem; /* Add rounded corners to the image */
 }
 
-.description p {
+.content p {
   text-align: left;
   margin: 1rem 0;
   padding: 0 1rem; /* Add some padding for readability */
