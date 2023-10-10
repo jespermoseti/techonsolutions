@@ -1,76 +1,82 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
-import Logo from "./logo";
-import Hamburger from "./hamburger";
-import Overlay from "./overlay";
+import Logo from "./Logo"; // You can replace this with your own Logo component
 import { useSession, signIn, signOut } from "next-auth/react";
-import classes from "./main-navigation.module.css";
+import styles from "./Navbar.module.css";
 
-function MainNavigation() {
-  const [showNavLinks, setShowNavLinks] = useState(false);
-
+function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { data: session } = useSession();
 
-  const router = useRouter();
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
-  function navLinkHandler() {
-    setShowNavLinks((prevState) => !prevState);
-  }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className={classes.header}>
-      <div className={classes.headContent}>
-        <div className={classes.logo}>
-          <Link href="/">
-            <a>
-              <Logo />
-            </a>
-          </Link>
-        </div>
-        <Hamburger showNavLinks={showNavLinks} navLinkHandler={navLinkHandler} />
-        <nav
-          className={
-            showNavLinks
-              ? `${classes.nav} ${classes.showNav}`
-              : `${classes.nav}`
-          }
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <Link href="/">
+          <a className={styles.logo}>
+            <Logo /> {/* Replace with your logo */}
+          </a>
+        </Link>
+        <div
+          className={`${styles.menuIcon} ${isMenuOpen && styles.menuOpen}`}
+          onClick={toggleMenu}
         >
-          <ul>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
+        <ul className={`${styles.menu} ${isMenuOpen && styles.menuOpen}`}>
+          <li>
+            <Link href="/about">
+              <a onClick={closeMenu}>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/services">
+              <a onClick={closeMenu}>Services</a>
+            </Link>
+          </li>
+          {session && (
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/dashboard">
+                <a onClick={closeMenu}>Dashboard</a>
+              </Link>
             </li>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            {session && (
-              <li>
-                <Link href="/dashboard">Dashboard</Link>
-              </li>
-            )}
-            <li>
-              <Link href="#">Shop</Link>
-            </li>
-            <li>
-              <Link href="https://blog.techonsolutions.com/">Blog</Link>
-            </li>
-            <li>
-              <Link href="/contacts">Contacts</Link>
-            </li>
-            <li>
-              <button
-                className={classes.loginBtn}
-                onClick={session ? () => signOut() : () => router.push("/auth")}
-              >
-                {session ? "Log Out" : "Log In"}
-              </button>
-            </li>
-          </ul>
-        </nav>
+          )}
+          <li>
+            <Link href="/shop">
+              <a onClick={closeMenu}>Shop</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://blog.techonsolutions.com/">
+              <a onClick={closeMenu}>Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacts">
+              <a onClick={closeMenu}>Contacts</a>
+            </Link>
+          </li>
+          <li>
+            <button
+              className={styles.loginBtn}
+              onClick={session ? () => signOut() : () => signIn("your-provider")}
+            >
+              {session ? "Log Out" : "Log In"}
+            </button>
+          </li>
+        </ul>
       </div>
-      {showNavLinks && <Overlay navLinkHandler={navLinkHandler} />}
-    </header>
+    </nav>
   );
 }
 
-export default MainNavigation;
+export default Navbar;
