@@ -7,6 +7,7 @@ function Home(props) {
   const descriptiondata = JSON.parse(props.data);
   const hrStyle = {
     borderTop: "0.5rem solid #333", // Change the color and thickness as needed
+    width: "100%",
     margin: "1rem 0", // Add margin above and below the horizontal rule
   };
 
