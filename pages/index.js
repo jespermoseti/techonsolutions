@@ -40,6 +40,7 @@ function Home(props) {
           </div>
         </Carousel>
       </div>
+        <hr />
       <div className={classes.descriptionContainer}>
             <img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />
            {descriptiondata.map((item) => (
