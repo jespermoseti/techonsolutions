@@ -2,7 +2,7 @@
   font-size: xx-large;
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 45rem) {
   .hamburger {
     display: none;
   }
