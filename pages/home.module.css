@@ -1,25 +1,55 @@
+/* home.module.css */
+
 .homepage {
-  margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
 }
 
-.homepage p {
-  margin: 0 0.5rem;
+.carouselContainer {
+  width: 80%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  position: relative;
 }
 
- .carousel {
-    margin: 0.5rem 0;
-  }
+.carouselContainer .carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-@media (min-width: 40rem) {
-  .homepage {
-    margin: auto;
-    max-width: 60rem;
-  }
-  .carousel {
-    margin: 0.25rem 0;
+.carouselContainer .carousel img {
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.carouselContainer .legend {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.descriptionContainer {
+  width: 80%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .carouselContainer {
+    width: 90%;
+    max-width: 100%;
   }
 }
