@@ -2,9 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo"; // You can replace this with your own Logo component
 import { useSession, signIn, signOut } from "next-auth/react";
-import styles from "./Navbar.module.css";
+import styles from "./MainNavigation.module.css";
 
-function Navbar() {
+function MainNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { data: session } = useSession();
 
@@ -79,4 +79,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default MainNavigation;
