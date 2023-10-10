@@ -5,6 +5,10 @@ import classes from "./home.module.css";
 
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
+  const hrStyle = {
+    borderTop: "2px solid #333", // Change the color and thickness as needed
+    margin: "1rem 0", // Add margin above and below the horizontal rule
+  };
 
   return (
     <section className={classes.homepage}>
@@ -40,7 +44,7 @@ function Home(props) {
           </div>
         </Carousel>
       </div>
-        <hr />
+        <hr style={hrStyle} />
       <div className={classes.descriptionContainer}>
             <img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />
            {descriptiondata.map((item) => (
