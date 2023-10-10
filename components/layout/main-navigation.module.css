@@ -1,113 +1,115 @@
-.navbar {
+.header {
   background-color: var(--color-primary-600);
   color: var(--color-primary-50);
+  height: var(--size-20);
   position: sticky;
+  padding: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
-.container {
+.headContent {
+  height: 100%;
+}
+
+.headItems {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0 0.25rem;
 }
 
-.logo {
-  text-decoration: none;
+.headItems a {
   color: var(--color-primary-50);
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
-.menuIcon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+.nav {
+  width: 100%;
+  position: absolute;
+  transition: 0.5s all ease-in;
+  transform: translateY(0%);
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-primary-50);
-  margin: 3px 0;
-  transition: 0.4s;
+.hideNav {
+  position: absolute;
+  transform: translateY(-190%);
+  transition: 0.0000000000001s all linear;
 }
 
-.menu {
+.hideNav ul {
   list-style: none;
-  display: flex;
-  align-items: center;
 }
 
-.menu li {
-  margin: 0 1rem;
+.nav ul {
+  border-top: 1px solid var(--color-primary-50);
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  height: fit-content;
 }
 
-.menu a {
-  text-decoration: none;
+.nav li a {
+  display: block;
+  background-color: var(--color-primary-600);
   color: var(--color-primary-50);
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: var(--color-primary-200);
+  padding: 1.5rem 0;
+  width: 100%;
+  border-bottom: 1.5px solid var(--color-primary-50);
+  border-left: 1.5px solid var(--color-primary-50);
 }
 
 .loginBtn {
-  margin-left: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
+  margin-top: 0.25rem;
+  float: right;
+  padding: 0 1rem;
   border-radius: 0.5rem;
-  background-color: var(--color-primary-500);
   color: var(--color-primary-50);
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-50);
 }
 
-.loginBtn:hover {
-  background-color: var(--color-primary-700);
-  color: var(--color-primary-100);
-}
-
-/* Mobile Menu Styles */
-@media (max-width: 767px) {
-  .menuIcon {
+@media (min-width: 40rem) {
+  .headContent {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav {
+    width: fit-content;
+    position: relative;
   }
 
-  .menu {
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-primary-600);
-    text-align: center;
+  .hideNav {
+    position: relative;
+    width: fit-content;
+    transform: translateY(0%);
+  }
+
+  .nav ul,
+  .hideNav ul {
+    border: none;
+    display: flex;
+    align-items: center;
     padding: 0;
+  }
+
+  .nav li,
+  .hideNav li {
+    margin: 0.5rem;
+  }
+  .nav li a,
+  .hideNav li a {
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    color: var(--color-primary-50);
+  }
+
+  .loginBtn {
     margin: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .menuOpen {
-    transform: scaleY(1);
-  }
-
-  .menu li {
-    margin: 0;
-    padding: 1rem 0;
-  }
-
-  .menu a {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
   }
 }
