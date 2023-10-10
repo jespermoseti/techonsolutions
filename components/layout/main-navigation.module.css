@@ -1,117 +1,102 @@
+/* main-navigation.module.css */
+
 .header {
-  background-color: var(--color-primary-600);
-  color: var(--color-primary-50);
-  height: var(--size-20);
-  position: sticky;
-  padding: 0;
-  top: 0;
-  z-index: 10;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
 }
 
 .headContent {
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .headItems {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 0 0.25rem;
 }
 
-.headItems a {
-  color: var(--color-primary-50);
+/* Style your logo here */
+.logo {
+  /* Add your logo styles */
 }
 
 .nav {
-  width: 100%;
-  position: absolute;
-  transition: 0.5s all ease-in;
-  transform: translateY(0%);
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-right: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6600;
 }
 
 .hideNav {
-  position: absolute;
-  transform: translateY(-190%);
-  transition: 0.0000000000001s all linear;
-}
-
-.hideNav ul {
-  list-style: none;
-}
-
-.nav ul {
-  border-top: 1px solid var(--color-primary-50);
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  height: fit-content;
-}
-
-.nav li a {
-  display: block;
-  background-color: var(--color-primary-600);
-  color: var(--color-primary-50);
-  padding: 1.5rem 0;
-  width: 100%;
-  border-bottom: 1.5px solid var(--color-primary-50);
-  border-left: 1.5px solid var(--color-primary-50);
+  display: none;
 }
 
 .loginBtn {
-  margin-top: 0.25rem;
-  float: right;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
-  color: var(--color-primary-50);
-  background-color: var(--color-primary-500);
-  border: 1px solid var(--color-primary-50);
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 40rem) {
-  .headContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.loginBtn:hover {
+  background-color: #ff3300;
+}
+
+/* Style your overlay here */
+.overlay {
+  /* Add overlay styles */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav {
-    width: fit-content;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px; /* Adjust this value as needed */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    text-align: center;
+    display: none;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .hideNav {
-    position: relative;
-    width: fit-content;
-    transform: translateY(0%);
-  }
-
-  .nav ul,
-  .hideNav ul {
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
-
-  .nav li,
-  .hideNav li {
-    margin: 0.5rem;
-  }
-  .nav li a,
-  .hideNav li a {
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    color: var(--color-primary-50);
-    border-bottom: 1.5px solid var(--color-primary-50);
-    border-left: 1.5px solid var(--color-primary-50);
-  }
-
-  .loginBtn {
-    margin: 0;
-    padding: 0 1rem;
-    border-radius: 0.5rem;
+    display: block;
   }
 }
