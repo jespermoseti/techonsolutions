@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo"; // You can replace this with your own Logo component
 import { useSession, signIn, signOut } from "next-auth/react";
-import styles from "./MainNavigation.module.css";
+import styles from "./main-navigation.module.css";
 
 function MainNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
