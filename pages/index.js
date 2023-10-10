@@ -6,7 +6,7 @@ import classes from "./home.module.css";
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
   const hrStyle = {
-    borderTop: "2px solid #333", // Change the color and thickness as needed
+    borderTop: "0.5rem solid #333", // Change the color and thickness as needed
     margin: "1rem 0", // Add margin above and below the horizontal rule
   };
 
