@@ -3,131 +3,109 @@
   color: var(--color-primary-50);
   height: var(--size-20);
   position: sticky;
+  padding: 0;
   top: 0;
   z-index: 10;
+}
+
+.headContent {
+  height: 100%;
+}
+
+.headItems {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  flex-wrap: wrap;
+  height: 100%;
+  margin: 0 0.25rem;
 }
 
 .headItems a {
   color: var(--color-primary-50);
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-.headItems a:hover {
-  color: var(--color-primary-300);
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.loginBtn {
-  background-color: var(--color-primary-500);
-  color: var(--color-primary-50);
-  border: 1px solid var(--color-primary-50);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.loginBtn:hover {
-  background-color: var(--color-primary-700);
-  color: var(--color-primary-100);
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 10;
-  display: none;
+  position: absolute;
+  transition: 0.5s all ease-in;
+  transform: translateY(0%);
+}
+
+.hideNav {
+  position: absolute;
+  transform: translateY(-190%);
+  transition: 0.0000000000001s all linear;
+}
+
+.hideNav ul {
+  list-style: none;
 }
 
 .nav ul {
-  list-style: none;
+  border-top: 1px solid var(--color-primary-50);
   margin: 0;
+  list-style: none;
   padding: 0;
-  display: flex;
+  text-align: center;
+  height: fit-content;
 }
 
-.nav li {
-  margin: 0 1rem;
-}
-
-.nav a {
+.nav li a {
+  display: block;
+  background-color: var(--color-primary-600);
   color: var(--color-primary-50);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  padding: 1.5rem 0;
+  width: 100%;
+  border-bottom: 1.5px solid var(--color-primary-50);
+  border-left: 1.5px solid var(--color-primary-50);
 }
 
-.nav a:hover {
-  color: var(--color-primary-300);
+.loginBtn {
+  margin-top: 0.25rem;
+  float: right;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  color: var(--color-primary-50);
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-50);
 }
 
-@media (max-width: 768px) {
-  .headItems {
+@media (min-width: 40rem) {
+  .headContent {
+    display: flex;
     justify-content: space-between;
-  }
-
-  .headItems a {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .overlay {
-    display: block;
-  }
-
-  .nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    height: 100%;
-    background-color: var(--color-primary-600);
-    flex-direction: column;
-    padding: 2rem 0;
-    transition: left 0.3s ease;
-    z-index: 11;
-  }
-
-  .nav.showNav {
-    left: 0;
-  }
-
-  .nav ul {
-    flex-direction: column;
     align-items: center;
   }
+  .nav {
+    width: fit-content;
+    position: relative;
+  }
 
-  .nav li {
-    margin: 1rem 0;
+  .hideNav {
+    position: relative;
+    width: fit-content;
+    transform: translateY(0%);
+  }
+
+  .nav ul,
+  .hideNav ul {
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav li,
+  .hideNav li {
+    margin: 0.5rem;
+  }
+  .nav li a,
+  .hideNav li a {
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    color: var(--color-primary-50);
   }
 
   .loginBtn {
-    margin: 1rem 0;
-  }
-}
+   
