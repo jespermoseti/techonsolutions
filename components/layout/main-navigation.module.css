@@ -65,7 +65,7 @@
   background-color: var(--color-primary-500) !important;
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 45rem) {
   .headContent {
     display: flex;
     justify-content: space-between;
