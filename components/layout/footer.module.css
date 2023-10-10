@@ -13,7 +13,7 @@
 
 .description {
   padding: 1rem 0;
-  max-width: 25%;
+  width: 100%;
 }
 
 .description h4,
@@ -83,6 +83,10 @@
     justify-content: space-between; /* Spread content horizontally */
     align-items: center;
     text-align: left;
+  }
+
+  .description {
+    max-width: 30%;
   }
 
   .navlinks ul {
