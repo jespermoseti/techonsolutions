@@ -9,14 +9,12 @@ import classes from "./main-navigation.module.css";
 
 function MainNavigation() {
   const [showNavLinks, setShowNavLinks] = useState(false);
-
   const { data: session } = useSession();
-
   const router = useRouter();
 
-  function navLinkHandler() {
+  const navLinkHandler = () => {
     setShowNavLinks((prevState) => !prevState);
-  }
+  };
 
   return (
     <header className={classes.header}>
@@ -27,46 +25,44 @@ function MainNavigation() {
               <Logo />
             </a>
           </Link>
-          <Hamburger
-            showNavLinks={showNavLinks}
-            navLinkHandler={navLinkHandler}
-          />
+          <Hamburger showNavLinks={showNavLinks} navLinkHandler={navLinkHandler} />
         </div>
-        <nav className={showNavLinks ? classes.nav : classes.hideNav}>
+        <nav className={`${classes.nav} ${showNavLinks ? classes.showNav : ""}`}>
           <ul>
             <li>
-              <Link href={"/about"}>About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href={"/services"}>Services</Link>
+              <Link href="/services">Services</Link>
             </li>
             {session && (
               <li>
-                <Link href={"/dashboard"}>Dashboard</Link>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
             )}
             <li>
-              <Link href={""}>Shop</Link>
+              <Link href="/">Shop</Link>
             </li>
             <li>
-              <Link href={"https://blog.techonsolutions.com/"}>Blog</Link>
+              <Link href="https://blog.techonsolutions.com/">Blog</Link>
             </li>
             <li>
-              <Link href={"/contacts"}>Contacts</Link>
+              <Link href="/contacts">Contacts</Link>
             </li>
             <li>
               <button
                 className={classes.loginBtn}
-                onClick={session ? () => signOut() : () => router.push("/auth")}
+                onClick={session ? signOut : () => router.push("/auth")}
               >
-                {session ? "LogOut" : "Login"}
+                {session ? "Log Out" : "Login"}
               </button>
             </li>
           </ul>
         </nav>
       </div>
-      {showNavLinks ? <Overlay navLinkHandler={navLinkHandler} /> : ""}
+      {showNavLinks && <Overlay navLinkHandler={navLinkHandler} />}
     </header>
   );
 }
+
 export default MainNavigation;
