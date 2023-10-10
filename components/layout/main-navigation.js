@@ -21,17 +21,14 @@ function MainNavigation() {
   return (
     <header className={classes.header}>
       <div className={classes.headContent}>
-        <div className={classes.headItems}>
+        <div className={classes.logo}>
           <Link href="/">
             <a>
               <Logo />
             </a>
           </Link>
-          <Hamburger
-            showNavLinks={showNavLinks}
-            navLinkHandler={navLinkHandler}
-          />
         </div>
+        <Hamburger showNavLinks={showNavLinks} navLinkHandler={navLinkHandler} />
         <nav
           className={
             showNavLinks
