@@ -51,7 +51,7 @@
   height: fit-content;
 }
 
-.nav li a {
+.nav li a, .nav li button {
   display: block;
   background-color: var(--color-primary-600);
   color: var(--color-primary-50);
