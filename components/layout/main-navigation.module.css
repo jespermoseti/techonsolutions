@@ -3,130 +3,131 @@
   color: var(--color-primary-50);
   height: var(--size-20);
   position: sticky;
-  padding: 0;
   top: 0;
   z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.headContent {
-  height: 100%;
-}
-
-.headItems {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 0 0.25rem;
+  padding: 0 1rem;
 }
 
 .headItems a {
   color: var(--color-primary-50);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.headItems a:hover {
+  color: var(--color-primary-300);
 }
 
 .nav {
-  width: 100%;
-  position: absolute;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
-}
-
-.showNav {
-  transform: translateY(0%);
-}
-
-.nav ul {
-  border-top: 1px solid var(--color-primary-50);
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  height: fit-content;
-}
-
-.nav li a {
-  display: block;
-  background-color: var(--color-primary-600);
-  color: var(--color-primary-50);
-  padding: 1.5rem 0;
-  width: 100%;
-  border-bottom: 1.5px solid var(--color-primary-50);
-  border-left: 1.5px solid var(--color-primary-50);
-  transition: background-color 0.2s ease;
-}
-
-.nav li a:hover {
-  background-color: var(--color-primary-700);
-}
-
-.nav li a.active {
-  background-color: var(--color-primary-700);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .loginBtn {
-  margin-top: 0.25rem;
-  float: right;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
-  color: var(--color-primary-50);
   background-color: var(--color-primary-500);
+  color: var(--color-primary-50);
   border: 1px solid var(--color-primary-50);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .loginBtn:hover {
   background-color: var(--color-primary-700);
+  color: var(--color-primary-100);
 }
 
-@media (min-width: 40rem) {
-  .headContent {
-    display: flex;
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  color: var(--color-primary-50);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary-300);
+}
+
+@media (max-width: 768px) {
+  .headItems {
     justify-content: space-between;
-    align-items: center;
+  }
+
+  .headItems a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .overlay {
+    display: block;
   }
 
   .nav {
-    width: fit-content;
-    position: relative;
-    transform: translateY(0%);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-primary-600);
+    flex-direction: column;
+    padding: 2rem 0;
+    transition: left 0.3s ease;
+    z-index: 11;
+  }
+
+  .nav.showNav {
+    left: 0;
   }
 
   .nav ul {
-    border: none;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0;
   }
 
-  .nav li,
-  .hideNav li {
-    margin: 0.5rem;
-  }
-
-  .nav li a,
-  .hideNav li a {
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    color: var(--color-primary-50);
-    transition: background-color 0.2s ease;
-  }
-
-  .nav li a:hover,
-  .hideNav li a:hover {
-    background-color: var(--color-primary-700);
+  .nav li {
+    margin: 1rem 0;
   }
 
   .loginBtn {
-    margin: 0;
-    padding: 0 1rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s ease;
-  }
-
-  .loginBtn:hover {
-    background-color: var(--color-primary-700);
+    margin: 1rem 0;
   }
 }
