@@ -21,7 +21,7 @@ function Footer() {
       <div className={classes.footer}>
         <div className={classes.description}>
           <h4>Techonsolutions</h4>
-          <p>At TechonSolutions, we are dedicated to delivering cutting-edge IT solutions that empower businesses and individuals alike. With a passion for innovation, a commitment to cybersecurity, and a wealth of technical expertise, we stand as your trusted partner in the ever-evolving world of technology. Whether you're a startup seeking a digital edge or an established organization looking to optimize your IT infrastructure, we're here to elevate your possibilities and transform your IT landscape.</p>
+          <p>{`At TechonSolutions, we are dedicated to delivering cutting-edge IT solutions that empower businesses and individuals alike. With a passion for innovation, a commitment to cybersecurity, and a wealth of technical expertise, we stand as your trusted partner in the ever-evolving world of technology. Whether you're a startup seeking a digital edge or an established organization looking to optimize your IT infrastructure, we're here to elevate your possibilities and transform your IT landscape.`}</p>
         </div>
         <div className={classes.navlinks}>
           <ul>
