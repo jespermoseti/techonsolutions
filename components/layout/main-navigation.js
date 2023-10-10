@@ -32,41 +32,48 @@ function MainNavigation() {
             navLinkHandler={navLinkHandler}
           />
         </div>
-        <nav className={showNavLinks ? classes.nav : classes.hideNav}>
+        <nav
+          className={
+            showNavLinks
+              ? `${classes.nav} ${classes.showNav}`
+              : `${classes.nav}`
+          }
+        >
           <ul>
             <li>
-              <Link href={"/about"}>About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href={"/services"}>Services</Link>
+              <Link href="/services">Services</Link>
             </li>
             {session && (
               <li>
-                <Link href={"/dashboard"}>Dashboard</Link>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
             )}
             <li>
-              <Link href={""}>Shop</Link>
+              <Link href="#">Shop</Link>
             </li>
             <li>
-              <Link href={""}>Blog</Link>
+              <Link href="https://blog.techonsolutions.com/">Blog</Link>
             </li>
             <li>
-              <Link href={"/contacts"}>Contacts</Link>
+              <Link href="/contacts">Contacts</Link>
             </li>
             <li>
               <button
                 className={classes.loginBtn}
                 onClick={session ? () => signOut() : () => router.push("/auth")}
               >
-                {session ? "LogOut" : "Login"}
+                {session ? "Log Out" : "Log In"}
               </button>
             </li>
           </ul>
         </nav>
       </div>
-      {showNavLinks ? <Overlay navLinkHandler={navLinkHandler} /> : ""}
+      {showNavLinks && <Overlay navLinkHandler={navLinkHandler} />}
     </header>
   );
 }
+
 export default MainNavigation;
