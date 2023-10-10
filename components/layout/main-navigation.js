@@ -1,82 +1,72 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
-import Logo from "./Logo"; // You can replace this with your own Logo component
+import Logo from "./logo";
+import Hamburger from "./hamburger";
+import Overlay from "./overlay";
 import { useSession, signIn, signOut } from "next-auth/react";
-import styles from "./main-navigation.module.css";
+import classes from "./main-navigation.module.css";
 
 function MainNavigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNavLinks, setShowNavLinks] = useState(false);
+
   const { data: session } = useSession();
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  const router = useRouter();
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  function navLinkHandler() {
+    setShowNavLinks((prevState) => !prevState);
+  }
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        <Link href="/">
-          <a className={styles.logo}>
-            <Logo /> {/* Replace with your logo */}
-          </a>
-        </Link>
-        <div
-          className={`${styles.menuIcon} ${isMenuOpen && styles.menuOpen}`}
-          onClick={toggleMenu}
-        >
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
+    <header className={classes.header}>
+      <div className={classes.headContent}>
+        <div className={classes.headItems}>
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
+          <Hamburger
+            showNavLinks={showNavLinks}
+            navLinkHandler={navLinkHandler}
+          />
         </div>
-        <ul className={`${styles.menu} ${isMenuOpen && styles.menuOpen}`}>
-          <li>
-            <Link href="/about">
-              <a onClick={closeMenu}>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services">
-              <a onClick={closeMenu}>Services</a>
-            </Link>
-          </li>
-          {session && (
+        <nav className={showNavLinks ? classes.nav : classes.hideNav}>
+          <ul>
             <li>
-              <Link href="/dashboard">
-                <a onClick={closeMenu}>Dashboard</a>
-              </Link>
+              <Link href={"/about"}>About</Link>
             </li>
-          )}
-          <li>
-            <Link href="/shop">
-              <a onClick={closeMenu}>Shop</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="https://blog.techonsolutions.com/">
-              <a onClick={closeMenu}>Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contacts">
-              <a onClick={closeMenu}>Contacts</a>
-            </Link>
-          </li>
-          <li>
-            <button
-              className={styles.loginBtn}
-              onClick={session ? () => signOut() : () => signIn("your-provider")}
-            >
-              {session ? "Log Out" : "Log In"}
-            </button>
-          </li>
-        </ul>
+            <li>
+              <Link href={"/services"}>Services</Link>
+            </li>
+            {session && (
+              <li>
+                <Link href={"/dashboard"}>Dashboard</Link>
+              </li>
+            )}
+            <li>
+              <Link href={""}>Shop</Link>
+            </li>
+            <li>
+              <Link href={"https://blog.techonsolutions.com/"}>Blog</Link>
+            </li>
+            <li>
+              <Link href={"/contacts"}>Contacts</Link>
+            </li>
+            <li>
+              <button
+                className={classes.loginBtn}
+                onClick={session ? () => signOut() : () => router.push("/auth")}
+              >
+                {session ? "LogOut" : "Login"}
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+      {showNavLinks ? <Overlay navLinkHandler={navLinkHandler} /> : ""}
+    </header>
   );
 }
-
 export default MainNavigation;
