@@ -100,6 +100,7 @@
   .hideNav li {
     margin: 0.5rem;
   }
+  
   .nav li a,
   .hideNav li a {
     padding: 0.25rem;
@@ -109,6 +110,14 @@
     border-left: 1.5px solid var(--color-primary-50);
   }
 
+  .nav li a,
+  .hideNav li a:hover {
+    color: black;
+    background-color: white;
+    border-bottom: 1.5px solid black;
+    border-left: 1.5px solid black;
+  }
+    
   .loginBtn {
     margin: 0;
     padding: 0 1rem;
