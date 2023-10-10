@@ -35,7 +35,7 @@
 .hideNav {
   position: absolute;
   transform: translateY(-190%);
-  transition: 0.0000000000001s all linear;
+  transition: 0.1s all linear;
 }
 
 .hideNav ul {
