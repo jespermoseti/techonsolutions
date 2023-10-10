@@ -41,7 +41,8 @@ function Home(props) {
         </Carousel>
       </div>
       <div className={classes.descriptionContainer}>
-        {descriptiondata.map((item) => (
+            <img src="/path-to-your-image.jpg" alt="New Image" className={classes.image} />
+           {descriptiondata.map((item) => (
           <p key={item._id}>{item.description}</p>
         ))}
       </div>
