@@ -1,38 +1,36 @@
+/* quote.module.css */
 .quote {
-  margin: 0;
-  padding: var(--size-1);
-  width: 100%;
-  text-align: center;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-}
-
-.title h3 {
   margin: 0 auto;
+  padding: var(--size-1);
+  max-width: 70rem; /* Center content and limit width for larger screens */
+  text-align: center;
 }
 
 .message {
   padding: 1rem;
   background-color: var(--color-primary-700);
   color: var(--color-primary-50);
+  border-radius: 1rem; /* Add some border radius for rounded corners */
+  margin-top: 1rem;
+  text-align: left; /* Align text to the left for better readability */
 }
 
 .control {
-  margin: 0.25rem 0;
-  padding: 0.25rem 0;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
-.control textarea,
-.control input {
+.control input,
+.control textarea {
   width: 100%;
-  border-radius: 3px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-primary-50);
 }
 
 .btn {
-  padding: 0.25rem 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
   width: 100%;
   border-radius: 0.5rem;
   background-color: var(--color-primary-600);
@@ -49,15 +47,14 @@
   text-align: center;
 }
 
-.description {
-  margin: 0;
-  padding: var(--size-1);
-  text-align: center;
-}
-
 .details {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: var(--size-2);
+  border: 1px solid var(--color-primary-700);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
 }
 
 .detail h4 {
@@ -66,56 +63,32 @@
 
 .deletebtn {
   width: fit-content;
-  margin: 0 auto;
   color: red;
-  font-size: xx-large;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (min-width: 70rem) {
-  .quote {
-    margin: 3rem auto;
-    max-width: 70rem;
-  }
-
   .message {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
-    border-radius: 1rem;
   }
 
-  .control {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .control {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .control textarea,
-  .control input {
+  .control input,
+  .control textarea {
     width: 25rem;
-    border-radius: 3px;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   .btn {
     margin-left: 75%;
-    margin-right: 0;
     width: 25%;
-    background-color: var(--color-primary-600);
-    color: var(--color-primary-50);
-  }
-  .details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
-  .deletebtn {
-    margin: 0;
+  .details {
+    margin: 1rem auto;
+    max-width: 70rem;
   }
 }
