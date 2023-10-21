@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
+import { IoLocationOutline } from "react-icons/Io";
 import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import NotificationContext from "../store/notification-context";
@@ -122,6 +123,10 @@ function Contacts(props) {
             <div className={classes.email}>
               <FiMail />
               <p>techonsolutions@yahoo.com</p>
+            </div>
+            <div className={classes.email}>
+              <IoLocationOutline />
+              <p>Nairobi, Kenya</p>
             </div>
           </div>
 
