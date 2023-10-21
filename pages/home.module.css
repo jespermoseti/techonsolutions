@@ -67,7 +67,7 @@
   }
 
   .image {
-    max-width: 50%; /* Adjust the image width as needed */
+    max-width: 80%; /* Adjust the image width as needed */
     margin-right: 1rem; /* Add some spacing between the image and paragraph */
   }
 }
