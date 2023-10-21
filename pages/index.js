@@ -11,7 +11,6 @@ function Home(props) {
     width: "100%",
     margin: "1rem 0", // Add margin above and below the horizontal rule
   };
-  const heading = "Welcome to TechonSolutions – Your Trusted IT Partner";
 
   return (
     <section className={classes.homepage}>
@@ -49,8 +48,7 @@ function Home(props) {
       </div>
         <hr style={hrStyle} />
       <div className={classes.descriptionContainer}>
-         <h1> {heading} </h1>
-            /*<img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />*/
+            <img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />
            {descriptiondata.map((item) => (
           <p key={item._id}>{item.description}</p>
         ))}
