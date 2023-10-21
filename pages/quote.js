@@ -122,15 +122,15 @@ function Quote(props) {
             <form onSubmit={submitHandler}>
               <div className={classes.control}>
                 <label htmlFor="title">Name</label>
-                <input type="name" id="title" required ref={nameRef} />
+                <input type="name" id="title" required ref={nameRef} placeholder="Your Name" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="title">Email</label>
-                <input type="email" id="title" required ref={emailRef} />
+                <input type="email" id="title" required ref={emailRef} placeholder="example@mail.com" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="phone">Phone</label>
-                <input type="number" id="phone" required ref={phoneRef} />
+                <input type="number" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="company">Company name (optional)</label>
@@ -138,13 +138,14 @@ function Quote(props) {
               </div>
               <div className={classes.control}>
                 <label htmlFor="description">
-                  What can we do for you? You can include your project budget
+                  What can we do for you? Include your project budget
                 </label>
                 <textarea
                   rows="10"
                   id="description"
                   required
                   ref={descriptionRef}
+                  placeholder="How can we help you?"
                 />
               </div>
               <button className={classes.btn}>Submit</button>
@@ -159,8 +160,8 @@ function Quote(props) {
               <p>An in-person meeting will be organized for you.</p>
             </div>
             <h4>
-              N:B - For students, this is not an attachment/internship
-              application form. Kindly check our career page if any.
+              N:B - this is not a job application form Kindly check our 
+              career page if any.
             </h4>
           </div>
         </div>
