@@ -48,7 +48,8 @@ function Home(props) {
       </div>
         <hr style={hrStyle} />
       <div className={classes.descriptionContainer}>
-            <img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />
+                <h1>Welcome to TechonSolutions – Your Trusted IT Partner</h1>
+            /*<img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />*/
            {descriptiondata.map((item) => (
           <p key={item._id}>{item.description}</p>
         ))}
