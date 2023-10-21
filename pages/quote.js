@@ -158,11 +158,11 @@ function Quote(props) {
               </p>
               <p>You will get a time and cost estimation of your project.</p>
               <p>An in-person meeting will be organized for you.</p>
-              <h4>
+            </div>
+            <h4>
               N:B - this is not a job application form Kindly check our 
               career page if any.
-              </h4>
-            </div>
+            </h4>
           </div>
         </div>
       </section>
