@@ -134,7 +134,7 @@ function Quote(props) {
               </div>
               <div className={classes.control}>
                 <label htmlFor="company">Company name (optional)</label>
-                <input type="name" id="company" ref={companyRef} />
+                <input type="name" id="company" ref={companyRef} placeholder="Techon Solutions"/>
               </div>
               <div className={classes.control}>
                 <label htmlFor="description">
@@ -158,11 +158,11 @@ function Quote(props) {
               </p>
               <p>You will get a time and cost estimation of your project.</p>
               <p>An in-person meeting will be organized for you.</p>
-            </div>
-            <h4>
+              <h4>
               N:B - this is not a job application form Kindly check our 
               career page if any.
-            </h4>
+              </h4>
+            </div>
           </div>
         </div>
       </section>
