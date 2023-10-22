@@ -6,10 +6,10 @@ import classes from "./home.module.css";
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
   const hrStyle = {
-    borderTop: "0.5rem solid #333",
+    borderTop: "0.5rem solid #333", // Change the color and thickness as needed
     borderRadius: "50%",
     width: "100%",
-    margin: "1rem 0",
+    margin: "1rem 0", // Add margin above and below the horizontal rule
   };
 
   return (
@@ -24,7 +24,7 @@ function Home(props) {
         >
           <div>
             <img src="/images/carousel1.jpg" alt="image1" />
-            <p className="legend">TechonSolutions</p>
+            <p className="legend">Techonsolutions</p>
           </div>
           <div>
             <img src="/images/carousel2.jpg" alt="image2" />
@@ -46,14 +46,10 @@ function Home(props) {
           </div>
         </Carousel>
       </div>
-      <hr style={hrStyle} />
+        <hr style={hrStyle} />
       <div className={classes.descriptionContainer}>
-        <img
-          src="/images/carousel1.jpg"
-          alt="New Image"
-          className={classes.image}
-        />
-        <h1>Welcome to TechonSolutions – Your Trusted IT Partner</h1>
+            <img src="/images/carousel1.jpg" alt="New Image" className={classes.image} />
+            <h1>Welcome to TechonSolutions – Your Trusted IT Partner</h1>
         <p>
           At TechonSolutions, we are your one-stop solution for a wide spectrum
           of IT services, serving clients not just in Nairobi but across the
@@ -115,6 +111,10 @@ function Home(props) {
           vision a reality. Contact us today for a consultation, and let's embark
           on a journey of innovation and growth together.
         </p>
+  
+           {descriptiondata.map((item) => (
+          <p key={item._id}>{item.description}</p>
+        ))}
       </div>
     </section>
   );
