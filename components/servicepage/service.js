@@ -19,7 +19,7 @@ function Service(props) {
           objectFit="cover"
           objectPosition="center"
         />
-        <p>{props.serviceitem.description.slice(0, 200)}   [Read more...]</p>
+        <p>{props.serviceitem.description.slice(0, 200)} [Read more...]</p>
       </div>
       <div className={classes.quote}>
         <Link href={"/quote"}>
