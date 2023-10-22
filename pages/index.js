@@ -69,7 +69,7 @@ function Home(props) {
               <li>**Networking:** Streamline your connectivity and ensure
               seamless communication within your organization.</li>
               <li>**Installations:** Whether it is setting up DSTV or installing
-              an efficient air conditioning system, we've got you covered.</li>
+              an efficient air conditioning system, we have got you covered.</li>
               <li>**Web Development:** From personal blogs to e-commerce
               websites, we create digital experiences that captivate and
               convert.</li>
