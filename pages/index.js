@@ -68,7 +68,7 @@ function Home(props) {
             <ul>
               <li>**Networking:** Streamline your connectivity and ensure
               seamless communication within your organization.</li>
-              <li>**Installations:** Whether it's setting up DSTV or installing
+              <li>**Installations:** Whether it is setting up DSTV or installing
               an efficient air conditioning system, we've got you covered.</li>
               <li>**Web Development:** From personal blogs to e-commerce
               websites, we create digital experiences that captivate and
@@ -106,9 +106,9 @@ function Home(props) {
           **Ready to Transform Your IT Landscape?**
         </p>
         <p>
-          Whether you're a startup, a multinational corporation, or an
+          Whether you are a startup, a multinational corporation, or an
           individual seeking IT solutions, TechonSolutions is here to make your
-          vision a reality. Contact us today for a consultation, and let's embark
+          vision a reality. Contact us today for a consultation, and let us embark
           on a journey of innovation and growth together.
         </p>
   
