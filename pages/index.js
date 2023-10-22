@@ -88,7 +88,7 @@ function Home(props) {
               <li><p>Cybersecurity: Stay one step ahead of cyber threats with our
               robust security solutions.</p></li>
               <li><p>Computer Repairs: Swift and reliable computer repair services. 
-                Don't let computer problems hold you back, We're just a call away
+                Do not let computer problems hold you back, We are just a call away
                 from getting you back to work, hassle-free.</p></li>
             </ul>
           </li>
