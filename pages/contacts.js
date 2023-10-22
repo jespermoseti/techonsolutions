@@ -6,7 +6,8 @@ import { useSession } from "next-auth/react";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
-import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsFacebook } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import NotificationContext from "../store/notification-context";
 import classes from "./contacts.module.css";
@@ -133,7 +134,7 @@ function Contacts(props) {
           <div className={classes.social}>
             <Link href="https://twitter.com/techonsolns">
               <a>
-                <BsTwitter />
+                <FaXTwitter />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/techon-solutions">
