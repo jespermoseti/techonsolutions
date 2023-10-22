@@ -134,7 +134,7 @@ function Contacts(props) {
           <div className={classes.social}>
             <Link href="https://twitter.com/techonsolns">
               <a>
-                <FaXTwitter />
+                <BsTwitter />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/techon-solutions">
