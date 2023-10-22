@@ -171,7 +171,7 @@ function Contacts(props) {
                   id="message"
                   required
                   ref={messageRef}
-                  placeholder="We will provide feedback at our earliest convinience"
+                  placeholder="We will provide feedback at our earliest convenience"
                   maxLength={150}
                 ></textarea>
               </div>
