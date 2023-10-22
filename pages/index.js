@@ -66,8 +66,8 @@ function Home(props) {
             gateway to a vast array of IT services. From Nairobi to New York,
             our team is ready to serve you with services including:
             <ul>
-              <li>**Networking:** Streamline your connectivity and ensure
-              seamless communication within your organization.</li>
+              <li><p>**Networking:** Streamline your connectivity and ensure
+              seamless communication within your organization.</p></li>
               <li>**Installations:** Whether it is setting up DSTV or installing
               an efficient air conditioning system, we have got you covered.</li>
               <li>**Web Development:** From personal blogs to e-commerce
