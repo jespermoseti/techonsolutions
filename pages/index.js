@@ -58,7 +58,7 @@ function Home(props) {
           individuals with cutting-edge technology.
         </p>
         <p>
-          **Why Choose Us?**
+          <h3>Why Choose Us?</h3>
         </p>
         <ul>
           <li>
@@ -66,28 +66,28 @@ function Home(props) {
             gateway to a vast array of IT services. From Nairobi to New York,
             our team is ready to serve you with services including:
             <ul>
-              <li><p>**Networking:** Streamline your connectivity and ensure
+              <li><p>Networking: Streamline your connectivity and ensure
               seamless communication within your organization.</p></li>
-              <li>**Installations:** Whether it is setting up DSTV or installing
-              an efficient air conditioning system, we have got you covered.</li>
-              <li>**Web Development:** From personal blogs to e-commerce
+              <li><p>Installations: Whether it is setting up DSTV or installing
+              an efficient air conditioning system, we have got you covered.</p></li>
+              <li><p>Web Development: From personal blogs to e-commerce
               websites, we create digital experiences that captivate and
-              convert.</li>
-              <li>**IT Consultancy:** Our experts provide strategic guidance to
-              keep your business on the cutting edge.</li>
-              <li>**Software Development:** Custom solutions, including Point of
+              convert.</p></li>
+              <li><p>IT Consultancy: Our experts provide strategic guidance to
+              keep your business on the cutting edge.</p></li>
+              <li><p>Software Development: Custom solutions, including Point of
               Sale, School Management, and Sacco Management software, tailored to
-              meet your unique needs.</li>
-              <li>**Cloud Computing:** Harness the power of AWS, Microsoft Azure,
-              and Google Cloud for flexible, scalable, and secure cloud solutions.</li>
-              <li>**Graphics Design:** Elevate your brand with eye-catching designs
-              that leave a lasting impression.</li>
-              <li>**Odoo Applications:** Deploy Odoo Enterprise or Community
-              applications seamlessly to enhance your business processes.</li>
-              <li>**CCTV Surveillance:** Protect your assets with state-of-the-art
-              CCTV systems and access control solutions.</li>
-              <li>**Cybersecurity:** Stay one step ahead of cyber threats with our
-              robust security solutions.</li>
+              meet your unique needs.</p></li>
+              <li><p>Cloud Computing: Harness the power of AWS, Microsoft Azure,
+              and Google Cloud for flexible, scalable, and secure cloud solutions.</p></li>
+              <li><p>Graphics Design: Elevate your brand with eye-catching designs
+              that leave a lasting impression.</p></li>
+              <li><p>Odoo Applications: Deploy Odoo Enterprise or Community
+              applications seamlessly to enhance your business processes.</p></li>
+              <li><p>CCTV Surveillance: Protect your assets with state-of-the-art
+              CCTV systems and access control solutions.</p></li>
+              <li><p>Cybersecurity: Stay one step ahead of cyber threats with our
+              robust security solutions.</p></li>
             </ul>
           </li>
           <li>
@@ -103,12 +103,12 @@ function Home(props) {
           </li>
         </ul>
         <p>
-          **Ready to Transform Your IT Landscape?**
+          <strong>Ready to Transform Your IT Landscape?</strong>
         </p>
         <p>
           Whether you are a startup, a multinational corporation, or an
           individual seeking IT solutions, TechonSolutions is here to make your
-          vision a reality. Contact us today for a consultation, and let us embark
+          vision a reality. <strong>Contact us today</strong> for a consultation, and let us embark
           on a journey of innovation and growth together.
         </p>
   
