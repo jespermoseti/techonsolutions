@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsInstagram, BsLinkedin, BsTwitter, BsFacebook } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsFacebook } from "react-icons/bs";
+import {FaXTwitter} from 'react-icons/fa6';
 import classes from "./footer.module.css";
 
 function Footer() {
@@ -55,7 +56,7 @@ function Footer() {
           </Link>
           <Link href="https://twitter.com/techonsolns">
             <a>
-              <BsTwitter />
+              <FaXTwitter />
             </a>
           </Link>
           <Link href="https://www.linkedin.com/company/techon-solutions">
