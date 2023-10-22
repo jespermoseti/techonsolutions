@@ -157,11 +157,11 @@ function Contacts(props) {
             <form onSubmit={submitHandler}>
               <div className={classes.control}>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" required ref={nameRef} />
+                <input type="text" id="name" required ref={nameRef} placeholder="Your Name" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" required ref={emailRef} />
+                <input type="email" id="email" required ref={emailRef} placeholder="example@mail.com" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="message">Message</label>
@@ -170,6 +170,8 @@ function Contacts(props) {
                   id="message"
                   required
                   ref={messageRef}
+                  placeholder="We will provide feedback at our earliest convinience"
+                  maxLength={150}
                 ></textarea>
               </div>
               <button className={classes.btn}>Send</button>
