@@ -61,7 +61,7 @@ function Home(props) {
         </p>
         <ul>
           <li>
-            <strong>A World of Services:</strong> <p>TechonSolutions is your
+            <p><strong>A World of Services:</strong> TechonSolutions is your
             gateway to a vast array of IT services. From Nairobi to New York,
             our team is ready to serve you with services including:</p>
             <ul>
@@ -90,13 +90,13 @@ function Home(props) {
             </ul>
           </li>
           <li>
-            <strong>Global Reach, Local Expertise:</strong> <p>Although based in
+            <p><strong>Global Reach, Local Expertise:</strong> Although based in
             Nairobi, we have a global perspective. Our solutions transcend
             borders, and we work with clients worldwide to transform their IT
             landscape.</p>
           </li>
           <li>
-            <strong>Customer-Centric Approach:</strong> <p>Our commitment to
+            <p><strong>Customer-Centric Approach:</strong> Our commitment to
             understanding your unique needs, goals, and challenges ensures that
             we deliver tailored, customer-focused solutions.</p>
           </li>
