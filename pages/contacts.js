@@ -7,7 +7,7 @@ import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsInstagram, BsLinkedin, BsFacebook } from "react-icons/bs";
-import { FaXTwitter } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import NotificationContext from "../store/notification-context";
 import classes from "./contacts.module.css";
@@ -134,7 +134,7 @@ function Contacts(props) {
           <div className={classes.social}>
             <Link href="https://twitter.com/techonsolns">
               <a>
-                <FaXTwitter />
+                <RiTwitterXLine />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/techon-solutions">
