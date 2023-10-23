@@ -59,6 +59,7 @@
 .carouselMessage {
   position: absolute;
   z-index: 10;
+  max-width: 30%;
   text-align: left;
   background: rgba(0, 0, 0, 0.7);
   color: white;
@@ -66,6 +67,9 @@
   margin: 2rem 0 0 3rem;
 }
 
+.carouselMessage h2 {
+  font-size: large;
+}
 
 @media screen and (min-width: 768px) {
   /* On desktop, display image and paragraph side by side */
