@@ -16,9 +16,9 @@ function Home(props) {
     <section className={classes.homepage}>
       <div className={classes.carouselContainer}>
         <div className={classes.carouselMessage}>
-      <h2>Techonsolutions - Your Partner in Tech Success</h2>
+      <h2>Your Tech Journey Starts with TechonSolutions</h2>
       <p className={classes.carouselMessageParagraph}>
-        We deliver cutting-edge IT solutions that empower your business.
+        Your Path to Success: Our Cutting-Edge IT Solutions. We deliver solutions that empower your business
       </p>
     </div>
         <Carousel
