@@ -58,7 +58,7 @@
 
 .carouselMessage {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   max-width: 30%;
   text-align: left;
   background: rgba(0, 0, 0, 0.7);
