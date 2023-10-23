@@ -14,13 +14,13 @@ function Home(props) {
 
   return (
     <section className={classes.homepage}>
-    <div className={classes.carouselMessage}>
+      <div className={classes.carouselContainer}>
+        <div className={classes.carouselMessage}>
       <h2>Techonsolutions - Your Partner in Tech Success</h2>
       <p className={classes.carouselMessageParagraph}>
         We deliver cutting-edge IT solutions that empower your business.
       </p>
     </div>
-      <div className={classes.carouselContainer}>
         <Carousel
           interval={5000}
           autoPlay={true}
