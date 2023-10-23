@@ -30,7 +30,6 @@ function Home(props) {
         >
           <div>
             <img src="/images/carousel1.jpg" alt="image1" />
-            <p className="legend"></p>
           </div>
           <div>
             <img src="/images/carousel2.jpg" alt="image2" />
