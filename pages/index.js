@@ -30,24 +30,20 @@ function Home(props) {
         >
           <div>
             <img src="/images/carousel1.jpg" alt="image1" />
-            <p className="legend">Techonsolutions</p>
+            <p className="legend"></p>
           </div>
           <div>
             <img src="/images/carousel2.jpg" alt="image2" />
-            <p className="legend">We offer IT services in Kenya</p>
+            <p className="legend"></p>
           </div>
           <div>
             <img src="/images/carousel3.jpg" alt="image3" />
             <p className="legend">
-              Networking | Consultancy | Cybersecurity | Web development | Cloud
-              computing | IT Support
             </p>
           </div>
           <div>
             <img src="/images/carousel4.jpg" alt="image4" />
             <p className="legend">
-              techonsolutions@yahoo.com | +254705933595 | Social media:
-              @techonsolns
             </p>
           </div>
         </Carousel>
