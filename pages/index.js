@@ -30,6 +30,11 @@ function Home(props) {
         >
           <div>
             <img src="/images/carousel1.jpg" alt="image1" />
+            <div className={classes.carouselMessage}>
+      <h2>Your Tech Journey Starts with TechonSolutions</h2>
+      <p className={classes.carouselMessageParagraph}>
+        Your Path to Success: Our Cutting-Edge IT Solutions. We deliver solutions that empower your business
+      </p>
           </div>
           <div>
             <img src="/images/carousel2.jpg" alt="image2" />
