@@ -59,16 +59,11 @@
 .carouselMessage {
   position: absolute;
   z-index: 5;
-  max-width: 50%;
   text-align: left;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px;
-  margin: 2rem 0 0 3rem;
-}
-
-.carouselMessage h2 {
-  font-size: 2rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -84,4 +79,20 @@
   .image {
     max-width: 80%; /* Adjust the image width as needed */
   }
+
+  .carouselMessage {
+  position: absolute;
+  z-index: 5;
+  max-width: 50%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  margin: 2rem 0 0 3rem;
+}
+
+.carouselMessage h2 {
+  font-size: 2rem;
+}
+
 }
