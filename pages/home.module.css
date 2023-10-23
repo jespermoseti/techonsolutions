@@ -56,6 +56,15 @@
   margin-bottom: 1rem; /* Add some spacing between the image and paragraph */
 }
 
+.carouselMessage {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
   /* On desktop, display image and paragraph side by side */
   .descriptionContainer {
