@@ -2,6 +2,14 @@ import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
 import nodemailer from "nodemailer";
 
+const transporter = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    user: "your-email@gmail.com",
+    pass: "your-email-password",
+  },
+});
+
 async function handler(req, res) {
   //post request
   if (req.method === "POST") {
@@ -58,6 +66,28 @@ async function handler(req, res) {
     try {
       const result = await db.collection("quotationdetails").insertOne(details);
       details.id = result.insertedId;
+
+      // Send an email with the quotation details
+  const mailOptions = {
+    from: "your-email@gmail.com",
+    to: "recipient-email@example.com",
+    subject: "New Quotation Request",
+    text: `
+      Name: ${details.name}
+      Email: ${details.email}
+      Phone: ${details.phone}
+      Company: ${details.company}
+      Description: ${details.description}
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending email: " + error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
     } catch (error) {
       client.close();
       res.status(500).json({ message: "Not sent!!" });
