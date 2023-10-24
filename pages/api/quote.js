@@ -81,7 +81,7 @@ async function handler(req, res) {
     `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  await transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error sending email: " + error);
     } else {
