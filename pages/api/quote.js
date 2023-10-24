@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
+import nodemailer from "nodemailer";
 
 async function handler(req, res) {
   //post request
