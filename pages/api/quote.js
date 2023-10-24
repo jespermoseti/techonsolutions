@@ -5,8 +5,8 @@ import nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "your-email@gmail.com",
-    pass: "your-email-password",
+    user: `${process.env.my_gmailaddress}`,
+    pass: `${process.env.my_gmailaddresspwd}`,
   },
 });
 
@@ -69,8 +69,8 @@ async function handler(req, res) {
 
       // Send an email with the quotation details
   const mailOptions = {
-    from: "your-email@gmail.com",
-    to: "recipient-email@example.com",
+    from: `${process.env.my_gmailaddress}`,
+    to: `${process.env.my_yahooaddress}`,
     subject: "New Quotation Request",
     text: `
       Name: ${details.name}
