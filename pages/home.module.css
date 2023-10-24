@@ -60,7 +60,7 @@
   position: absolute;
   z-index: 5;
   text-align: left;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   color: white;
   padding: 5px;
   margin: 0;
@@ -93,7 +93,7 @@
   z-index: 5;
   max-width: 50%;
   text-align: left;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.4);
   color: white;
   padding: 10px;
   margin: 2rem 0 0 3rem;
