@@ -25,7 +25,7 @@ async function sendQuoteData(details) {
 
 async function deleteQuote(idreceived) {
   const body = { id: idreceived };
-  const response = await fetch("api/contact", {
+  const response = await fetch("api/quote", {
     method: "DELETE",
     body: JSON.stringify(body),
     headers: { "Content-Type": "application/json" },
