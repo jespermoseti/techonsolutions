@@ -65,7 +65,9 @@ async function handler(req, res) {
       console.error("An error occurred:", error);
       res.status(500).json({ message: "Internal Server Error" });
     }
+  }
 
+  //delete request
   if (req.method === "DELETE") {
     const { id } = req.body;
 
