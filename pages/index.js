@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import Image from "next/image"; 
 import classes from "./home.module.css";
 
 function Home(props) {
@@ -29,16 +30,16 @@ function Home(props) {
           showArrows={true}
         >
           <div>
-            <img src="/images/carousel1.jpg" alt="image1" />
+            <Img src="/images/carousel1.jpg" alt="image1" />
           </div>
           <div>
-            <img src="/images/carousel2.jpg" alt="image2" />
+            <Img src="/images/carousel2.jpg" alt="image2" />
           </div>
           <div>
-            <img src="/images/carousel3.jpg" alt="image3" />
+            <Img src="/images/carousel3.jpg" alt="image3" />
           </div>
           <div>
-            <img src="/images/carousel4.jpg" alt="image4" />
+            <Img src="/images/carousel4.jpg" alt="image4" />
           </div>
         </Carousel>
       </div>
