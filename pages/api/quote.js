@@ -1,14 +1,5 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
-import nodemailer from "nodemailer";
-
-const transporter = nodemailer.createTransport({
-  service: "Gmail",
-  auth: {
-    user: `${process.env.my_gmailaddress}`,
-    pass: `${process.env.my_gmailaddresspwd}`,
-  },
-});
 
 async function handler(req, res) {
   //post request
@@ -68,33 +59,6 @@ async function handler(req, res) {
       details.id = result.insertedId;
 
       // Send an email with the quotation details
-  const mailOptions = {
-    from: `${process.env.my_gmailaddress}`,
-    to: `${process.env.my_yahooaddress}`,
-    subject: "New Quotation Request",
-    text: `
-      Name: ${details.name}
-      Email: ${details.email}
-      Phone: ${details.phone}
-      Company: ${details.company}
-      Description: ${details.description}
-    `,
-  };
-
-  await transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending email: " + error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
-    } catch (error) {
-      client.close();
-      res.status(500).json({ message: "Not sent!!" });
-      return;
-    }
-
-    client.close();
 
     res.status(201).json({ message: "Sent" });
   }
