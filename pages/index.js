@@ -30,16 +30,16 @@ function Home(props) {
           showArrows={true}
         >
           <div>
-            <Img src="/images/carousel1.jpg" alt="image1" />
+            <Image src="/images/carousel1.jpg" alt="image1" />
           </div>
           <div>
-            <Img src="/images/carousel2.jpg" alt="image2" />
+            <Image src="/images/carousel2.jpg" alt="image2" />
           </div>
           <div>
-            <Img src="/images/carousel3.jpg" alt="image3" />
+            <Image src="/images/carousel3.jpg" alt="image3" />
           </div>
           <div>
-            <Img src="/images/carousel4.jpg" alt="image4" />
+            <Image src="/images/carousel4.jpg" alt="image4" />
           </div>
         </Carousel>
       </div>
