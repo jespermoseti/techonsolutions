@@ -60,8 +60,11 @@ async function handler(req, res) {
 
       // Send an email with the quotation details
 
-    res.status(201).json({ message: "Sent" });
-  }
+      res.status(201).json({ message: "Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
 
   if (req.method === "DELETE") {
     const { id } = req.body;
