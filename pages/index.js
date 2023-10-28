@@ -47,12 +47,6 @@ function Home(props) {
           <div>
             <img src="/images/carousel6.jpg" alt="image4" />
           </div>
-          <div>
-            <img src="/images/carousel7.jpg" alt="image4" />
-          </div>
-          <div>
-            <img src="/images/carousel8.jpg" alt="image4" />
-          </div>
         </Carousel>
       </div>
         <hr style={hrStyle} />
