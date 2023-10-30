@@ -26,7 +26,7 @@
   display: flex;
   list-style: none;
   flex-direction: column; /* Display links vertically by default */
-  align-items: center; /* Center links horizontally */
+  align-items: left; /* Center links horizontally */
   margin: 0;
   padding: 0;
 }
@@ -93,7 +93,6 @@
   .navlinks ul {
     flex-direction: column; /* Display links vertically on desktop */
     margin-top: 0;
-    text-align: left;
   }
 
   .navlinks li {
