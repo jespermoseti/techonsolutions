@@ -93,6 +93,7 @@
   .navlinks ul {
     flex-direction: column; /* Display links vertically on desktop */
     margin-top: 0;
+    align-items: left;
   }
 
   .navlinks li {
