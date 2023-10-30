@@ -123,7 +123,7 @@ function Contacts(props) {
             </div>
             <div className={classes.email}>
               <FiMail />
-              <p>techonsolutions@yahoo.com</p>
+              <p>info@techonsolutions.com</p>
             </div>
             <div className={classes.email}>
               <IoLocationOutline />
