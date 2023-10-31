@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import classes from "../styles/about.module.css";
+import classes from "./about.module.css";
 
 function About(props) {
   const aboutdata = JSON.parse(props.data);
