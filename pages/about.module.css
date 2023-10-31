@@ -1,29 +1,16 @@
-/* styles/about.module.css */
-
 .aboutpage {
+  margin: 0;
   padding: var(--size-1);
   text-align: left;
-  background-image: url('/images/carousel4.jpg'); /* Path to your background image */
-  background-size: cover;
 }
 
-.about-overlay {
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white overlay */
+.aboutpage p {
+  margin: 0 0.5rem;
 }
 
-.about-content {
-  padding: 1rem; /* Adjust padding as needed for your design */
-  color: #000;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 40rem) {
   .aboutpage {
-    background-attachment: fixed;
-  }
-  
-  .about-content {
-    margin: 0 auto;
+    margin: 3rem auto;
     max-width: 50rem;
-    padding: 3rem; /* Adjust padding for larger screens */
   }
 }
