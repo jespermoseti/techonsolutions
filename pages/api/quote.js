@@ -8,19 +8,34 @@ async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, phone, company, description } = req.body;
 
+    //validation functions
+    function isValidName(name) {
+      return name.trim() !== "";
+    }
+
+    function isValidEmail(email) {
+    // Use a regular expression to validate email format
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailPattern.test(email);
+    }
+
+    function isValidPhoneNumber(phone) {
+    // Use a regular expression to validate phone number format
+    const phonePattern = /^\+\d{1,3} \d{9,15}$/;
+      return phonePattern.test(phone);
+    }
+
+    function isValidDescription(description) {
+      return description.trim() !== "";
+    }
+
+    //Server side validation
     if (
-      !name ||
-      name.trim() === "" ||
-      !email ||
-      email.trim() === "" ||
-      !email.includes("@") ||
-      !phone ||
-      phone.trim() === "" ||
-      phone.length > 14 ||
-      !description ||
-      description.trim() === ""
+      !name || !isValidName(name) ||
+    !email || !isValidEmail(email) ||
+    !phone || !isValidPhoneNumber(phone) ||
+    !description || !isValidDescription(description)
     ) {
-      console.log(name);
       res.status(422).json({ message: "INVALID INPUT" });
       return;
     }
