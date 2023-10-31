@@ -130,7 +130,7 @@ function Quote(props) {
               </div>
               <div className={classes.control}>
                 <label htmlFor="phone">Phone</label>
-                <input type="number" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
+                <input type="name" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
               </div>
               <div className={classes.control}>
                 <label htmlFor="company">Company name (optional)</label>
