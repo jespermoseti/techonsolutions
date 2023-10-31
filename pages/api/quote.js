@@ -81,22 +81,24 @@ async function handler(req, res) {
       return;
     }
 
-    //try {
-      //const result = await db.collection("quotationdetails").insertOne(details);
-      //details.id = result.insertedId;
+    // Save quote to the database
+    
+    try {
+      const result = await db.collection("quotationdetails").insertOne(details);
+      details.id = result.insertedId;
 
-      //res.status(201).json({ message: "Sent" });
-    //}catch (error) {
-      //console.error("An error occurred:", error);
-      //res.status(500).json({ message: "Internal Server Error" });
-    //}
+      res.status(201).json({ message: "Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
 
     // Send an email with the quotation details
 
     try {
       await transporter.sendMail(mailOption);
 
-      res.status(201).json({ message: "Email Sent" });
+      //res.status(201).json({ message: "Email Sent" });
     }catch (error) {
       console.error("An error occurred:", error);
       res.status(500).json({ message: "Couldn't send email" });
