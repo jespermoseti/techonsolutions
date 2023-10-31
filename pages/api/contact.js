@@ -6,14 +6,26 @@ async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
 
+    //validation functions
+    function isValidName(name) {
+      return name.trim() !== "";
+    }
+
+    function isValidEmail(email) {
+    // Use a regular expression to validate email format
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailPattern.test(email);
+    }
+
+    function isValidMessage(message) {
+      return message.trim() !== "";
+    }
+
+    //Server side validation
     if (
-      !name ||
-      name.trim() === "" ||
-      !email ||
-      email.trim() === "" ||
-      !email.includes("@") ||
-      !message ||
-      message.trim() === ""
+      !name || !isValidName(name) ||
+    !email || !isValidEmail(email) ||
+    !message || !isValidMessage(message)
     ) {
       console.log(name);
       res.status(422).json({ message: "INVALID INPUT" });
