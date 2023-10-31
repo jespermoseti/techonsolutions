@@ -3,7 +3,7 @@
 .aboutpage {
   padding: var(--size-1);
   text-align: left;
-  background-image: url('/images/carousel9.jpg'); /* Path to your background image */
+  background-image: url('/images/carousel6.jpg'); /* Path to your background image */
   background-size: cover;
 }
 
