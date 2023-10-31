@@ -86,14 +86,21 @@ async function handler(req, res) {
       const result = await db.collection("quotationdetails").insertOne(details);
       details.id = result.insertedId;
 
-      // Send an email with the quotation details
-
-      await transporter.sendMail(mailOption)
-
       res.status(201).json({ message: "Sent" });
     }catch (error) {
       console.error("An error occurred:", error);
       res.status(500).json({ message: "Internal Server Error" });
+    }
+
+    // Send an email with the quotation details
+
+    try {
+      await transporter.sendMail(mailOption);
+
+      res.status(201).json({ message: "Email Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Couldn't send email" });
     }
   }
 
