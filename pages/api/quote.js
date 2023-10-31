@@ -1,11 +1,10 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 
 async function handler(req, res) {
   //post request
 
-  
   if (req.method === "POST") {
     const { name, email, phone, company, description } = req.body;
 
@@ -82,15 +81,15 @@ async function handler(req, res) {
       return;
     }
 
-    try {
-      const result = await db.collection("quotationdetails").insertOne(details);
-      details.id = result.insertedId;
+    //try {
+      //const result = await db.collection("quotationdetails").insertOne(details);
+      //details.id = result.insertedId;
 
-      res.status(201).json({ message: "Sent" });
-    }catch (error) {
-      console.error("An error occurred:", error);
-      res.status(500).json({ message: "Internal Server Error" });
-    }
+      //res.status(201).json({ message: "Sent" });
+    //}catch (error) {
+      //console.error("An error occurred:", error);
+      //res.status(500).json({ message: "Internal Server Error" });
+    //}
 
     // Send an email with the quotation details
 
