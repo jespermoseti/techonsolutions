@@ -1,8 +1,11 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
+import nodemailer from 'nodemailer'
 
 async function handler(req, res) {
   //post request
+
+  
   if (req.method === "POST") {
     const { name, email, phone, company, description } = req.body;
 
@@ -24,6 +27,31 @@ async function handler(req, res) {
     }
 
     const details = { name, email, phone, company, description }; //{ name: name, email: email, message: message };
+
+    const transporter = nodemailer.createTransport({
+            service: 'zoho',
+            host: 'smtpro.zoho.in',
+            port: 465,
+            secure: true,
+            auth: {
+                user: 'info@techonsolutions.com',
+                pass: process.env.TECHONSOLUTIONS_EMAIL_PSWD
+            }
+        });
+
+    const mailOption = {
+            from: "info@techonsolutions.com",
+            to: "techonsolutions@yahoo.com",
+            subject: "New Quotation Request",
+            text: `
+              Name: ${details.name}
+              Email: ${details.email}
+              Phone: ${details.phone}
+              Company: ${details.company}
+              Description: ${details.description}
+            `,
+    };
+
 
     let client;
 
@@ -59,6 +87,8 @@ async function handler(req, res) {
       details.id = result.insertedId;
 
       // Send an email with the quotation details
+
+      await transporter.sendMail(mailOption)
 
       res.status(201).json({ message: "Sent" });
     }catch (error) {
