@@ -81,6 +81,17 @@ async function handler(req, res) {
       return;
     }
 
+     // Send an email with the quotation details
+
+    try {
+      await transporter.sendMail(mailOption);
+
+      //res.status(201).json({ message: "Email Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Couldn't send email" });
+    }
+
     // Save quote to the database
     
     try {
@@ -91,17 +102,6 @@ async function handler(req, res) {
     }catch (error) {
       console.error("An error occurred:", error);
       res.status(500).json({ message: "Internal Server Error" });
-    }
-
-    // Send an email with the quotation details
-
-    try {
-      await transporter.sendMail(mailOption);
-
-      //res.status(201).json({ message: "Email Sent" });
-    }catch (error) {
-      console.error("An error occurred:", error);
-      res.status(500).json({ message: "Couldn't send email" });
     }
   }
 
