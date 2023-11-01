@@ -9,7 +9,6 @@ function Services(props) {
 
   return (
     <div className={classes.servicespage}>
-      <div className={classes.stickyBackground}></div> {/* Sticky background image */}
       {servicesdata.map((serviceitem) => (
         <div key={serviceitem._id} className={classes.service}>
           <Link href={`/services/${serviceitem.service}`.toLowerCase()}>
