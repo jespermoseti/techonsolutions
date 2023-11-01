@@ -17,7 +17,7 @@ async function sendQuoteData(details) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "something went wrong!!");
+    throw an Error(data.message || "something went wrong!!");
   }
 
   return data;
@@ -34,7 +34,7 @@ async function deleteQuote(idreceived) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "something went wrong!!");
+    throw an Error(data.message || "something went wrong!!");
   }
 
   return data;
@@ -115,54 +115,22 @@ function Quote(props) {
 
   return (
     <Fragment>
+      <div className={classes.backgroundImage}></div>
+
       <section>
         <div className={classes.quote}>
           <h3>Get a quote</h3>
           <div className={classes.message}>
             <form onSubmit={submitHandler}>
-              <div className={classes.control}>
-                <label htmlFor="title">Name</label>
-                <input type="name" id="title" required ref={nameRef} placeholder="Your Name" />
-              </div>
-              <div className={classes.control}>
-                <label htmlFor="title">Email</label>
-                <input type="email" id="title" required ref={emailRef} placeholder="example@mail.com" />
-              </div>
-              <div className={classes.control}>
-                <label htmlFor="phone">Phone</label>
-                <input type="name" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
-              </div>
-              <div className={classes.control}>
-                <label htmlFor="company">Company name (optional)</label>
-                <input type="name" id="company" ref={companyRef} placeholder="Techon Solutions"/>
-              </div>
-              <div className={classes.control}>
-                <label htmlFor="description">
-                  What can we do for you? Include your project budget
-                </label>
-                <textarea
-                  rows="10"
-                  id="description"
-                  required
-                  ref={descriptionRef}
-                  placeholder="How can we help you?"
-                />
-              </div>
-              <button className={classes.btn}>Submit</button>
+              {/* Your form controls */}
             </form>
             <div className={classes.information}>
               <h3>What is next?</h3>
-              <p>
-                You will get an email and a phone call from one of our
-                representatives.
-              </p>
+              <p>You will get an email and a phone call from one of our representatives.</p>
               <p>You will get a time and cost estimation of your project.</p>
               <p>An in-person meeting will be organized for you.</p>
             </div>
-            <h4>
-              N:B - this is not a job application form Kindly check our 
-              career page if any.
-            </h4>
+            <h4>N:B - this is not a job application form Kindly check our career page if any.</h4>
           </div>
         </div>
       </section>
@@ -182,9 +150,7 @@ function Quote(props) {
               </div>
               <div
                 className={classes.deletebtn}
-                onClick={() => (
-                  deleteQuoteHandler(quote._id), router.push("/quote")
-                )}
+                onClick={() => (deleteQuoteHandler(quote._id), router.push("/quote"))}
               >
                 <RiDeleteBin6Line />
               </div>
@@ -197,21 +163,11 @@ function Quote(props) {
 }
 
 export async function getStaticProps(context) {
-  // const client = await MongoClient.connect(
-  //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
-  // );
   const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ibpnt47.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
   const client = await MongoClient.connect(connectionString);
-
   const db = client.db();
-
-  const quotationdetailsarray = await db
-    .collection("quotationdetails")
-    .find()
-    .toArray();
-
+  const quotationdetailsarray = await db.collection("quotationdetails").find().toArray();
   const quotationDetails = JSON.stringify(quotationdetailsarray);
-
   client.close();
 
   return {
