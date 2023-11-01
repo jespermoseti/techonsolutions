@@ -122,7 +122,35 @@ function Quote(props) {
           <h3>Get a quote</h3>
           <div className={classes.message}>
             <form onSubmit={submitHandler}>
-              {/* Your form controls */}
+              <div className={classes.control}>
+                <label htmlFor="title">Name</label>
+                <input type="name" id="title" required ref={nameRef} placeholder="Your Name" />
+              </div>
+              <div className={classes.control}>
+                <label htmlFor="title">Email</label>
+                <input type="email" id="title" required ref={emailRef} placeholder="example@mail.com" />
+              </div>
+              <div className={classes.control}>
+                <label htmlFor="phone">Phone</label>
+                <input type="name" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
+              </div>
+              <div className={classes.control}>
+                <label htmlFor="company">Company name (optional)</label>
+                <input type="name" id="company" ref={companyRef} placeholder="Techon Solutions"/>
+              </div>
+              <div className={classes.control}>
+                <label htmlFor="description">
+                  What can we do for you? Include your project budget
+                </label>
+                <textarea
+                  rows="10"
+                  id="description"
+                  required
+                  ref={descriptionRef}
+                  placeholder="How can we help you?"
+                />
+              </div>
+              <button className={classes.btn}>Submit</button>
             </form>
             <div className={classes.information}>
               <h3>What is next?</h3>
