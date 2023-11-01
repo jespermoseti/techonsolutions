@@ -37,7 +37,7 @@ function Home(props) {
             <img src="/images/carousel2.jpg" alt="image2" />
           </div>
           <div>
-            <img src="/images/carousel3.jpg" alt="image3" />
+            <img src "/images/carousel3.jpg" alt="image3" />
           </div>
           <div>
             <img src="/images/carousel4.jpg" alt="image4" />
@@ -120,7 +120,7 @@ function Home(props) {
 
         {descriptiondata.map((item) => (
           <p key={item._id}>{item.description}</p>
-        )}
+        ))}
       </div>
     </section>
   );
@@ -132,7 +132,7 @@ export async function getStaticProps(context) {
   const db = client.db();
   const dataarray = await db.collection("descriptiondetails").find().toArray();
   const array = JSON.stringify(dataarray);
-  client close();
+  client.close();
 
   return {
     props: {
