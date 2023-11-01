@@ -1,49 +1,22 @@
-import { MongoClient } from "mongodb";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Service from "../../components/servicepage/service";
-import classes from "./services.module.css";
+/* services.module.css */
 
-function Services(props) {
-  const servicesdata = JSON.parse(props.data);
-
-  return (
-    <div className={classes.servicespage}>
-      {servicesdata.map((serviceitem) => (
-        <div key={serviceitem._id} className={classes.service}>
-          <Link href={`/services/${serviceitem.service}`.toLowerCase()}>
-            <a>
-              <Service serviceitem={serviceitem} />
-            </a>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
+.servicespage {
+  margin: 3rem auto;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-export async function getStaticProps(context) {
-  // const client = await MongoClient.connect(
-  //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
-  // );
-
-  const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ibpnt47.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
-  const client = await MongoClient.connect(connectionString);
-
-  const db = client.db();
-
-  const dataarray = await db.collection("servicesdetails").find().toArray();
-
-  const array = JSON.stringify(dataarray);
-
-  client.close();
-
-  return {
-    props: {
-      data: array,
-    },
-    revalidate: 60,
-  };
+.service {
+  max-width: 24rem;
+  margin: 1rem;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-export default Services;
+.service:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
