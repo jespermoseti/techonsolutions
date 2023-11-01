@@ -8,17 +8,18 @@ function Services(props) {
   const servicesdata = JSON.parse(props.data);
 
   return (
-    <div className={classes.servicespage}>
-      <div className={classes.stickyBackground}></div>
-      {servicesdata.map((serviceitem) => (
-        <div key={serviceitem._id} className={classes.service}>
-          <Link href={`/services/${serviceitem.service}`.toLowerCase()}>
-            <a>
-              <Service serviceitem={serviceitem} />
-            </a>
-          </Link>
-        </div>
-      ))}
+    <div className={classes.servicesContainer}>
+      <div className={classes.servicespage}>
+        {servicesdata.map((serviceitem) => (
+          <div key={serviceitem._id} className={classes.service}>
+            <Link href={`/services/${serviceitem.service}`.toLowerCase()}>
+              <a>
+                <Service serviceitem={serviceitem} />
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
