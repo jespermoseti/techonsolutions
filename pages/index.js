@@ -25,7 +25,24 @@ function Home(props) {
           </p>
         </div>
         <Carousel interval={5000} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={true}>
-          {/* Your carousel content */}
+          <div>
+            <img src="/images/carousel1.jpg" alt="image1" />
+          </div>
+          <div>
+            <img src="/images/carousel2.jpg" alt="image2" />
+          </div>
+          <div>
+            <img src="/images/carousel3.jpg" alt="image3" />
+          </div>
+          <div>
+            <img src="/images/carousel4.jpg" alt="image4" />
+          </div>
+          <div>
+            <img src="/images/carousel5.jpg" alt="image4" />
+          </div>
+          <div>
+            <img src="/images/carousel6.jpg" alt="image4" />
+          </div>
         </Carousel>
       </div>
       <hr style={hrStyle} />
