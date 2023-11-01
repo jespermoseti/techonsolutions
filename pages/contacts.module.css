@@ -4,7 +4,7 @@
   margin: 3rem auto;
   max-width: 50rem;
   text-align: center;
-  background-image: url('/images/contact-background.jpg'); /* Path to your background image */
+  background-image: url('/images/background1.jpg'); /* Path to your background image */
   background-size: cover;
   background-position: center;
   color: var(--color-primary-50);
