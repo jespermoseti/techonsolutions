@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
 
   const array = JSON.stringify(dataarray);
 
-  client close();
+  client.close();
 
   return {
     props: {
