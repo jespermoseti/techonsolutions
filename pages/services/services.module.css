@@ -1,24 +1,13 @@
 /* services.module.css */
 
+/* Mobile-First Styles (for screens up to 768px) */
 .servicespage {
-  margin: 3rem auto;
-  max-width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative; /* Set the position to relative for positioning the sticky background */
-}
-
-.stickyBackground {
-  background-image: url('/images/background3.jpg'); /* Update the path to your background image */
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%; /* Set width and height to cover the entire viewport */
-  position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: -1; /* Place it behind the services */
+  position: relative; /* Added to position services container relative to the background image */
 }
 
 .service {
@@ -32,4 +21,15 @@
 .service:hover {
   transform: scale(1.02);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply the background image to the body or a container that doesn't affect the layout of services */
+body {
+  background: url("/images/background3.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Media query for screens larger than 768px (desktop styles) */
+@media screen and (min-width: 769px) {
+  /* Desktop-specific styles (if needed) */
 }
