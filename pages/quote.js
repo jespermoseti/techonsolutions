@@ -2,7 +2,7 @@ import { Fragment, useRef, useContext } from "react";
 import { MongoClient } from "mongodb";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import NotificationContext from "../store/notification-context";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import classes from "./quote.module.css";
@@ -17,7 +17,7 @@ async function sendQuoteData(details) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "something went wrong!!");
+    throw new Error(data.message || "Something went wrong!!");
   }
 
   return data;
@@ -34,7 +34,7 @@ async function deleteQuote(idreceived) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw an Error(data.message || "something went wrong!!");
+    throw new Error(data.message || "Something went wrong!!");
   }
 
   return data;
@@ -130,7 +130,7 @@ function Quote(props) {
               <p>You will get a time and cost estimation of your project.</p>
               <p>An in-person meeting will be organized for you.</p>
             </div>
-            <h4>N:B - this is not a job application form Kindly check our career page if any.</h4>
+            <h4>N:B - this is not a job application form. Kindly check our career page if any.</h4>
           </div>
         </div>
       </section>
