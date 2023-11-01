@@ -6,6 +6,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative; /* Set the position to relative for positioning the sticky background */
+}
+
+.stickyBackground {
+  background-image: url('/images/background3.jpg'); /* Update the path to your background image */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%; /* Set width and height to cover the entire viewport */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: -1; /* Place it behind the services */
 }
 
 .service {
