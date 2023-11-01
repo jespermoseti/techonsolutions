@@ -6,11 +6,12 @@
 }
 
 .servicespage {
-  margin: 0.5rem auto;
+  margin: auto;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 3rem;
 }
 
 .service {
