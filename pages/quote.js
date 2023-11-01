@@ -17,7 +17,7 @@ async function sendQuoteData(details) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw an Error(data.message || "something went wrong!!");
+    throw new Error(data.message || "something went wrong!!");
   }
 
   return data;
