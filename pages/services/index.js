@@ -9,6 +9,7 @@ function Services(props) {
 
   return (
     <div className={classes.servicespage}>
+      <div className={classes.backgroundImage}></div>
       {servicesdata.map((serviceitem) => (
         <div key={serviceitem._id} className={classes.service}>
           <Link href={`/services/${serviceitem.service}`.toLowerCase()}>
@@ -23,10 +24,6 @@ function Services(props) {
 }
 
 export async function getStaticProps(context) {
-  // const client = await MongoClient.connect(
-  //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
-  // );
-
   const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ibpnt47.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
   const client = await MongoClient.connect(connectionString);
 
