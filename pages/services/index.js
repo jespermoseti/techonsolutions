@@ -24,7 +24,27 @@ function Services(props) {
 }
 
 export async function getStaticProps(context) {
-  // MongoDB data fetching code
+  // const client = await MongoClient.connect(
+  //   "mongodb+srv://<username>:<password>@<clustername>.ibpnt47.mongodb.net/<database>?retryWrites=true&w=majority"
+  // );
+
+  const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ibpnt47.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
+  const client = await MongoClient.connect(connectionString);
+
+  const db = client.db();
+
+  const dataarray = await db.collection("servicesdetails").find().toArray();
+
+  const array = JSON.stringify(dataarray);
+
+  client.close();
+
+  return {
+    props: {
+      data: array,
+    },
+    revalidate: 60,
+  };
 }
 
 export default Services;
