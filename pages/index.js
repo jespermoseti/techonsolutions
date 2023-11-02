@@ -85,7 +85,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?Africans,office.workplace')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?modern,office,workplace')`
               }}
             />
           </div>
