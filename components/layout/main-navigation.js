@@ -37,24 +37,24 @@ function MainNavigation() {
             <li onClick={showNavLinks && navLinkHandler}>
               <Link href={"/about"}>About</Link>
             </li>
-            <li>
+            <li onClick={showNavLinks && navLinkHandler}>
               <Link href={"/services"}>Services</Link>
             </li>
             {session && (
-              <li>
+              <li onClick={showNavLinks && navLinkHandler}>
                 <Link href={"/dashboard"}>Dashboard</Link>
               </li>
             )}
-            <li>
+            <li onClick={showNavLinks && navLinkHandler}>
               <Link href={""}>Shop</Link>
             </li>
-            <li>
+            <li onClick={showNavLinks && navLinkHandler}>
               <Link href={"https://blog.techonsolutions.com/"}>Blog</Link>
             </li>
-            <li>
+            <li onClick={showNavLinks && navLinkHandler}>
               <Link href={"/contacts"}>Contacts</Link>
             </li>
-            <li>
+            <li onClick={showNavLinks && navLinkHandler}>
               <button
                 className={classes.loginBtn}
                 onClick={session ? () => signOut() : () => router.push("/auth")}
