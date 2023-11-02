@@ -34,7 +34,7 @@ function MainNavigation() {
         </div>
         <nav className={showNavLinks ? classes.nav : classes.hideNav}>
           <ul>
-            <li onClick={navLinkHandler}>
+            <li {showNavLinks && (onClick={navLinkHandler})}>
               <Link href={"/about"}>About</Link>
             </li>
             <li>
