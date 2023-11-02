@@ -53,7 +53,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?technology')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?information,technology')`
               }}
             />
           </div>
@@ -69,7 +69,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?programming')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?telecommunication')`
               }}
             />
           </div>
@@ -85,7 +85,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?digital')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?IT,company')`
               }}
             />
           </div>
