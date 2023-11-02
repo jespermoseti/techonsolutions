@@ -4,6 +4,7 @@ import { NotificationContextProvider } from "../store/notification-context";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import Head from "next/head";
 import "../styles/globals.css";
+import "../styles/styles.css";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
