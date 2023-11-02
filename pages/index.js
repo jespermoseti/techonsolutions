@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import classes from "./home.module.css";
+import "../styles/styles.css";
 
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
