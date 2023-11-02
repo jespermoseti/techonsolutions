@@ -53,7 +53,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x500')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?technology')`
               }}
             />
           </div>
@@ -69,7 +69,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x400)`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?technology')`
               }}
             />
           </div>
@@ -85,7 +85,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x450')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?technology')`
               }}
             />
           </div>
