@@ -4,13 +4,13 @@
   text-align: left;
   padding-left: 40px;
 }
-p {
-  max-width: 400px;
-  color: #fff;
+.content p {
+  max-width: 400px !important;
+  color: #fff !important;
 }
-h1 {
-  color: #fff;
-  margin-bottom: 10px;
+.content h1 {
+  color: #fff !important;
+  margin-bottom: 10px !important;
 }
 
 .swiper-slide {
