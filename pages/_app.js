@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 CCTV cybersecurity computer repairs"
             />
 
-            <!-- Facebook Open Graph tags -->
+             {/* Facebook Open Graph tags */} 
                 <meta property="og:title" content="Techonsolutions" />
                 <meta property="og:description" content="At TechonSolutions, we are dedicated to delivering cutting-edge IT solutions
                 that empower businesses and individuals alike. Whether you're a startup seeking a digital edge or an established
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 IT landscape." />
                 <meta property="og:image" content="/images/carousel4.jpg" />
 
-            <!-- Twitter Cards -->
+             {/* Twitter Cards */} 
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content="Techonsolutions" />
                 <meta name="twitter:description" content="At TechonSolutions, we are dedicated to delivering cutting-edge IT solutions
@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 IT landscape." />
                 <meta name="twitter:image" content="/images/carousel4.jpg" />
 
-            <!-- Schema Markup -->  
+             {/* Schema Markup */} 
                 <script type="application/ld+json" dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                       "@context": "http://schema.org",
