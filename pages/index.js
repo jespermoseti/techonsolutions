@@ -5,7 +5,6 @@ import Image from "next/image";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import classes from "./home.module.css";
-import "../styles/styles.css";
 
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
