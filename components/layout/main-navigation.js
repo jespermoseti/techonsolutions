@@ -23,7 +23,7 @@ function MainNavigation() {
       <div className={classes.headContent}>
         <div className={classes.headItems}>
           <Link href="/">
-            <a>
+            <a onClick={showNavLinks && navLinkHandler}>
               <Logo />
             </a>
           </Link>
