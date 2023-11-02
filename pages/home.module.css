@@ -29,34 +29,5 @@
 }
 
 @media screen and (min-width: 768px) {
-  .descriptionContainer {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 75%;
-  }
-
-  .image {
-    max-width: 80%;
-  }
-
-  .carouselMessage {
-    position: absolute;
-    z-index: 5;
-    max-width: 50%;
-    text-align: left;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 10px;
-    margin: 2rem 0 0 3rem;
-  }
-
-  .carouselMessage h2 {
-    font-size: 2rem;
-  }
-
-  .carouselMessage p {
-    font-size: 1rem;
-  }
+  
 }
