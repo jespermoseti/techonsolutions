@@ -44,9 +44,9 @@ function Home(props) {
         <Swiper {...params}>
           <div>
             <div className="content">
-              <h1 data-swiper-parallax={-200}>Hello</h1>
+              <h1 data-swiper-parallax={-200}>Your Tech Journey Starts with TechonSolutions</h1>
               <p data-swiper-parallax={-400}>
-                Why are iPhone chargers not called Apple Juice?!
+                Your Path to Success: Our Cutting-Edge IT Solutions. We deliver solutions that empower your business.
               </p>
             </div>
             <div
