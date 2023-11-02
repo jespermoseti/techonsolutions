@@ -30,7 +30,8 @@ function Home(props) {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true
-    }
+    },
+    height: '100%', // Make sure the carousel takes full height
   };
 
   return (
