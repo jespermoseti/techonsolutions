@@ -20,7 +20,7 @@ function Home(props) {
   const params = {
     preloadImages: false,
     autoplay: {
-      delay: 3000
+      delay: 4000
     },
     loop: true,
     watchSlidesProgress: true,
