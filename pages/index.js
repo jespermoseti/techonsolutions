@@ -59,10 +59,10 @@ function Home(props) {
           </div>
           <div>
             <div className="content">
-              <h1 data-swiper-parallax={-200}>Hello Again</h1>
+              <h1 data-swiper-parallax={-200}>Charting a New Course</h1>
               <p data-swiper-parallax={-400}>
-                I lost my job at the bank on my very first day. A woman asked me
-                to check her balance, so I pushed her over.
+                Let us sail uncharted waters together! TechonSolutions is your compass to 
+                navigate the dynamic IT landscape, ensuring you stay ahead of the curve.
               </p>
             </div>
             <div
@@ -75,10 +75,10 @@ function Home(props) {
           </div>
           <div>
             <div className="content">
-              <h1 data-swiper-parallax={-200}>Goodbye</h1>
+              <h1 data-swiper-parallax={-200}>Unleash Your Potential</h1>
               <p data-swiper-parallax={-400}>
-                A friend of mine tried to annoy me with bird puns, but I soon
-                realized that toucan play at that game.
+                TechonSolutions is your key to unlocking your full potential in the digital
+                realm. Let us unleash the power of technology together.
               </p>
             </div>
             <div
