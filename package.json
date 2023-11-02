@@ -20,7 +20,10 @@
     "react-messenger-customer-chat": "^0.8.0",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.31.0",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "react-id-swiper": "^2.4.0",
+    "react-scripts": "^3.0.1",
+    "swiper": "^5.3.1"
   },
   "devDependencies": {
     "eslint": "8.24.0",
