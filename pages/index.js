@@ -2,11 +2,14 @@ import { MongoClient } from "mongodb";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
+import Swiper from "react-id-swiper";
+import "swiper/css/swiper.css";
 import classes from "./home.module.css";
 import "../styles/styles.css";
 
 function Home(props) {
   const descriptiondata = JSON.parse(props.data);
+  /*horizontal rule styles*/
   const hrStyle = {
     borderTop: "0.5rem solid #333",
     borderRadius: "50%",
@@ -14,37 +17,81 @@ function Home(props) {
     margin: "1rem 0",
   };
 
+  /*swipperjs constant*/
+  const params = {
+    preloadImages: false,
+    autoplay: {
+      delay: 3000
+    },
+    loop: true,
+    watchSlidesProgress: true,
+    speed: 2000,
+    parallax: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true
+    }
+  };
+
   return (
     <section className={classes.homepage}>
       <div className={classes.backgroundImage}></div>
 
       <div className={classes.carouselContainer}>
-        <div className={classes.carouselMessage}>
-          <h2>Your Tech Journey Starts with TechonSolutions</h2>
-          <p className={classes.carouselMessageParagraph}>
-            Your Path to Success: Our Cutting-Edge IT Solutions. We deliver solutions that empower your business.
-          </p>
-        </div>
-        <Carousel interval={5000} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={true}>
+
+        <div className="slider">
+        <Swiper {...params}>
           <div>
-            <img src="/images/carousel1.jpg" alt="image1" />
+            <div className="content">
+              <h1 data-swiper-parallax={-200}>Hello</h1>
+              <p data-swiper-parallax={-400}>
+                Why are iPhone chargers not called Apple Juice?!
+              </p>
+            </div>
+            <div
+              data-swiper-parallax={"23%"}
+              className="slider-bg"
+              style={{
+                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x500')`
+              }}
+            />
           </div>
           <div>
-            <img src="/images/carousel2.jpg" alt="image2" />
+            <div className="content">
+              <h1 data-swiper-parallax={-200}>Hello Again</h1>
+              <p data-swiper-parallax={-400}>
+                I lost my job at the bank on my very first day. A woman asked me
+                to check her balance, so I pushed her over.
+              </p>
+            </div>
+            <div
+              data-swiper-parallax={"23%"}
+              className="slider-bg"
+              style={{
+                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x400)`
+              }}
+            />
           </div>
           <div>
-            <img src="/images/carousel3.jpg" alt="image3" />
+            <div className="content">
+              <h1 data-swiper-parallax={-200}>Goodbye</h1>
+              <p data-swiper-parallax={-400}>
+                A friend of mine tried to annoy me with bird puns, but I soon
+                realized that toucan play at that game.
+              </p>
+            </div>
+            <div
+              data-swiper-parallax={"23%"}
+              className="slider-bg"
+              style={{
+                backgroundImage: `url('https://source.unsplash.com/collection/2091539/1000x450')`
+              }}
+            />
           </div>
-          <div>
-            <img src="/images/carousel4.jpg" alt="image4" />
-          </div>
-          <div>
-            <img src="/images/carousel5.jpg" alt="image4" />
-          </div>
-          <div>
-            <img src="/images/carousel6.jpg" alt="image4" />
-          </div>
-        </Carousel>
+        </Swiper>
+      </div>
+       
       </div>
       <hr style={hrStyle} />
       <div className={classes.descriptionContainer}>
