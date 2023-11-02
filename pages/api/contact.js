@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "bson";
+import nodemailer from 'nodemailer';
 
 async function handler(req, res) {
   //post request
@@ -34,6 +35,28 @@ async function handler(req, res) {
 
     const details = { name, email, message }; //{ name: name, email: email, message: message };
 
+    const transporter = nodemailer.createTransport({
+            service: 'zoho',
+            host: 'smtpro.zoho.in',
+            port: 465,
+            secure: true,
+            auth: {
+                user: 'info@techonsolutions.com',
+                pass: process.env.TECHONSOLUTIONS_EMAIL_PSWD
+            }
+        });
+
+    const mailOption = {
+            from: "info@techonsolutions.com",
+            to: "techonsolutions@yahoo.com",
+            subject: "New Message",
+            text: `
+              Name: ${details.name}
+              Email: ${details.email}
+              Message: ${details.message}
+            `,
+    };
+
     let client;
 
     try {
@@ -62,6 +85,19 @@ async function handler(req, res) {
       client.close();
       return;
     }
+
+    // Send an email with the message details
+
+    try {
+      await transporter.sendMail(mailOption);
+
+      //res.status(201).json({ message: "Email Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Couldn't send email" });
+    }
+
+    // Save message to the database
 
     try {
       const result = await db.collection("messagedetails").insertOne(details);
