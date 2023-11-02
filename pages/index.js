@@ -69,7 +69,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?city,evening,night,Nairobi')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?city,Nairobi')`
               }}
             />
           </div>
@@ -85,7 +85,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?office,desk')`
+                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?office,modern')`
               }}
             />
           </div>
