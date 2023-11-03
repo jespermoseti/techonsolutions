@@ -10,7 +10,7 @@ import "../styles/swipercourousel.css";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   /*Setting up google analytics*/
-  const router = useRouter;
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
