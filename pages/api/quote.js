@@ -113,6 +113,7 @@ async function handler(req, res) {
 
     try {
       await transporter.sendMail(mailOption);
+      await transporter.sendMail(mailOptionUser);
 
       //res.status(201).json({ message: "Email Sent" });
     }catch (error) {
@@ -134,14 +135,14 @@ async function handler(req, res) {
 
     // Send feedback email to the user
 
-    try {
-      await transporter.sendMail(mailOptionUser);
+    //try {
+      //await transporter.sendMail(mailOptionUser);
 
       //res.status(201).json({ message: "Email Sent" });
-    }catch (error) {
-      console.error("An error occurred:", error);
-      res.status(500).json({ message: "Couldn't send email" });
-    }
+    //}catch (error) {
+      //console.error("An error occurred:", error);
+      //res.status(500).json({ message: "Couldn't send email" });
+    //}
   }
 
   //delete request
