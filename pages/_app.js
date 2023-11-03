@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
             />
             <meta
               name="description"
-              content="Techonsolutions information technology IT solutions and services in Nairobi Kenya 
-                Networking installations web-development consultancy software cloud-computing graphics design
-                CCTV cybersecurity computer repairs"
+              content="Techonsolutions is information technology IT solutions and services in Nairobi Kenya such as 
+                Networking, installations, web-development, consultancy, software, cloud-computing, graphics design,
+                CCTV surveillance, cybersecurity, computer repairs and more"
             />
 
              {/* Facebook Open Graph tags */} 
