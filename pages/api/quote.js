@@ -71,12 +71,12 @@ async function handler(req, res) {
             to: `${details.email}`,
             subject: "Quotation Request to Techonsolutions",
             text: `
-              Hi ${details.name} ,
+Hi ${details.name} ,
               
-              We have received your Quotation request. Our Team is working around the clock to deliver a seamless experince to our Clientele. We will give you feedback at our earliest convinience. Thank you for your patience and choosing Techonsolutions as your IT partner.
+We have received your Quotation request. Our Team is working around the clock to deliver a seamless experince to our Clientele. We will give you feedback at our earliest convinience. Thank you for your patience and choosing Techonsolutions as your IT partner. If you have any concern or queries you can reach to to us through Phone call, Text Message, WhatsApp messanger on +254 705933595 or email us on info@techonsolutions.com.
               
-              Techonsolutions.
-              Regards.
+Techonsolutions.
+Regards.
             `,
     };
 
