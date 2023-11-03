@@ -72,9 +72,9 @@ async function handler(req, res) {
             subject: "Quotation Request to Techonsolutions",
             text: `
               Hi ${details.name} ,
-              We have received your Quotation request. Our Team is working around the clock to deliver a seamless experince to our Clientele.
-              We will give you feedback at our earliest convinience. 
-              Thank you for your patience and choosing Techonsolutions as your IT partner.
+              
+              We have received your Quotation request. Our Team is working around the clock to deliver a seamless experince to our Clientele. We will give you feedback at our earliest convinience. Thank you for your patience and choosing Techonsolutions as your IT partner.
+              
               Techonsolutions.
               Regards.
             `,
