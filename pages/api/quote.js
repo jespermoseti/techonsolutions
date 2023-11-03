@@ -66,6 +66,19 @@ async function handler(req, res) {
             `,
     };
 
+     const mailOptionUser = {
+            from: "info@techonsolutions.com",
+            to: `${details.email}`,
+            subject: "Quotation Request to Techonsolutions",
+            text: `
+              Hi ${details.name} ,
+              We have received your Quotation request. Our Team is working around the clock to deliver
+              a seamless experince to our Clientele. We will give you feedback at our earliest convinience.
+              Thank you for your patience and choosing Techonsolutions as your IT partner.
+              Techonsolutions.
+              Regards.
+            `,
+    };
 
     let client;
 
@@ -117,6 +130,17 @@ async function handler(req, res) {
     }catch (error) {
       console.error("An error occurred:", error);
       res.status(500).json({ message: "Internal Server Error" });
+    }
+
+    // Send feedback email to the user
+
+    try {
+      await transporter.sendMail(mailOptionUser);
+
+      //res.status(201).json({ message: "Email Sent" });
+    }catch (error) {
+      console.error("An error occurred:", error);
+      res.status(500).json({ message: "Couldn't send email" });
     }
   }
 
