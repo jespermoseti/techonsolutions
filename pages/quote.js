@@ -131,7 +131,7 @@ function Quote(props) {
                 <input type="email" id="title" required ref={emailRef} placeholder="example@mail.com" />
               </div>
               <div className={classes.control}>
-                <label htmlFor="phone">Phone(+254 712345678)</label>
+                <label htmlFor="phone">Phone (+254 712345678)</label>
                 <input type="name" id="phone" required ref={phoneRef} placeholder="+254 712345678" />
               </div>
               <div className={classes.control}>
