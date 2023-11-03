@@ -60,7 +60,7 @@ async function handler(req, res) {
     const mailOptionUser = {
             from: "info@techonsolutions.com",
             to: `${details.email}`,
-            subject: "Quotation Request to Techonsolutions",
+            subject: "Message to Techonsolutions",
             text: `
               Hi ${details.name} ,
               
