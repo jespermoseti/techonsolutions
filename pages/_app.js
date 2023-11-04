@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 that empower businesses and individuals alike. Whether you're a startup seeking a digital edge or an established
                 organization looking to optimize your IT infrastructure, we're here to elevate your possibilities and transform your
                 IT landscape." />
-                <meta property="og:image" content="/images/carousel4.jpg" />
+                <meta property="og:image" content="/images/techonsol.jpg" />
 
              {/* Twitter Cards */} 
                 <meta name="twitter:card" content="summary" />
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 that empower businesses and individuals alike. Whether you're a startup seeking a digital edge or an established
                 organization looking to optimize your IT infrastructure, we're here to elevate your possibilities and transform your
                 IT landscape." />
-                <meta name="twitter:image" content="/images/carousel4.jpg" />
+                <meta name="twitter:image" content="https://www.techonsolutions.com/images/techonsol.jpg" />
 
              {/* Schema Markup */} 
                 <script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                       "name": "TechonSolutions",
                       "url": "https://techonsolutions.com/",
                       "description": "IT services and solutions company",
-                      "logo": "/images/favicon.ico",
+                      "logo": "https://www.techonsolutions.com/images/techonsol.jpg",
                       "address": {
                         "@type": "PostalAddress",
                         "streetAddress": "Nairobi",
