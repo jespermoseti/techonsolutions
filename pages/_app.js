@@ -62,28 +62,29 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
              {/* Schema Markup */} 
                 <script type="application/ld+json" dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "http://schema.org",
-                      "@type": "Organization",
-                      "name": "TechonSolutions",
-                      "url": "https://techonsolutions.com/",
-                      "description": "IT services and solutions company",
-                      "logo": "https://www.techonsolutions.com/images/techonsol.jpg",
-                      "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "Nairobi",
-                        "addressLocality": "City",
-                        "addressRegion": "",
-                        "postalCode": "",
-                        "addressCountry": "Kenya"
-                      },
-                      "contactPoint": {
-                        "@type": "ContactPoint",
-                        "telephone": "+254 113270070",
-                        "contactType": "Customer service and Enquiry"
-                      }
-                    })
-                  }} />
+  __html: JSON.stringify({
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "TechonSolutions",
+    "url": "https://techonsolutions.com/",
+    "description": "IT services and solutions company",
+    "logo": "/images/techonsol.jpg", // Use a relative path
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nairobi",
+      "addressLocality": "City",
+      "addressRegion": "",
+      "postalCode": "",
+      "addressCountry": "Kenya"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254 113270070",
+      "contactType": "Customer service and Enquiry"
+    }
+  })
+}} />
+
           </Head>
           <Component {...pageProps} />
           <MessengerCustomerChat
