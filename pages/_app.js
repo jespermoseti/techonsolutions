@@ -1,6 +1,4 @@
 import { SessionProvider } from "next-auth/react";
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Layout from "../components/layout/layout";
 import { NotificationContextProvider } from "../store/notification-context";
 import MessengerCustomerChat from "react-messenger-customer-chat";
@@ -9,23 +7,7 @@ import "../styles/globals.css";
 import "../styles/swipercourousel.css";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-  /*Setting up google analytics*/
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      window.gtag('config', 'G-CF64JTKL46', {
-        page_path: url,
-            });
-        };
-
-        router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
-        };
-      }, []);
-
-    
+  
   return (
     <SessionProvider session={session}>
       <NotificationContextProvider>
