@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout";
 import { NotificationContextProvider } from "../store/notification-context";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import Head from "next/head";
+import Script from "next/script";
 import "../styles/globals.css";
 import "../styles/swipercourousel.css";
 
@@ -66,6 +67,21 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     }
   })
 }} />
+
+          {/* Google Analytics */}
+
+          <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${measurementId}');
+            `}
+          </Script>
 
           </Head>
           <Component {...pageProps} />
