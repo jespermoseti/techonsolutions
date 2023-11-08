@@ -67,8 +67,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     }
   })
 }} />
+  
+          </Head>
 
-          {/* Google Analytics */}
+             {/* Google Analytics */}
 
           <Script
           strategy="afterInteractive"
@@ -82,8 +84,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 gtag('config', 'G-CF64JTKL46');
             `}
           </Script>
-
-          </Head>
+  
           <Component {...pageProps} />
           <MessengerCustomerChat
             pageId="106857868629963"
