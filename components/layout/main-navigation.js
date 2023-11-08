@@ -46,7 +46,7 @@ function MainNavigation() {
               </li>
             )}
             <li onClick={showNavLinks && navLinkHandler}>
-              <Link href={""}>Shop</Link>
+              <Link href={"https://wa.me/c/254113270070"}>Shop</Link>
             </li>
             <li onClick={showNavLinks && navLinkHandler}>
               <Link href={"https://blog.techonsolutions.com/"}>Blog</Link>
