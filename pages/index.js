@@ -53,7 +53,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?information,technology')`
+                backgroundImage: `url('https://unsplash.com/photos/gray-and-black-laptop-computer-on-surface-Im7lZjxeLhg')`
               }}
             />
           </div>
@@ -69,7 +69,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?city')`
+                backgroundImage: `url('https://unsplash.com/photos/a-macbook-with-lines-of-code-on-its-screen-on-a-busy-desk-m_HRfLhgABo')`
               }}
             />
           </div>
@@ -85,7 +85,7 @@ function Home(props) {
               data-swiper-parallax={"23%"}
               className="slider-bg"
               style={{
-                backgroundImage: `url('https://source.unsplash.com/random/1000x500/?computers')`
+                backgroundImage: `url('https://unsplash.com/photos/apple-macbook-beside-computer-mouse-on-table-9l_326FISzk')`
               }}
             />
           </div>
